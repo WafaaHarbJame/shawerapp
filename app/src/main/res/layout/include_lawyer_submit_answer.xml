@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/coinsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/gradient_yankee_with_border">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_regular"
+                android:gravity="center"
+                android:text="@string/label_compose_collect_gem"
+                android:textColor="@color/wheat"
+                android:textSize="@dimen/text_size_12"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/serviceFeeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/tajawal_extrabold"
+                android:text="@string/label_compose_question_fee"
+                android:textColor="@color/wheat"
+                android:textSize="@dimen/text_size_20"
+                tools:text="200 COINS"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/submitCompositionView"
+                android:layout_width="71dp"
+                android:layout_height="70dp"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_pay" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

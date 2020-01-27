@@ -1,0 +1,87 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@drawable/screen_background</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustPan</item>
+    </style>
+
+    <style name="ThemeProgressDialog" parent="@style/AppTheme">
+        <item name="colorAccent">@color/satinSheenGold</item>
+        <item name="android:colorAccent">@color/satinSheenGold</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="InputFieldStyle">
+        <item name="android:background">@drawable/input_field_bg</item>
+        <item name="android:drawablePadding">@dimen/size_15</item>
+        <item name="android:fontFamily">@font/tajawal_regular</item>
+        <item name="android:paddingStart">@dimen/size_15</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingEnd">@dimen/size_15</item>
+        <item name="android:textColor">@color/input_field_text_color</item>
+        <item name="android:textColorHint">@color/input_filed_hint_color</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/satinSheenGold</item>
+        <item name="android:colorAccent">@color/satinSheenGold</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/satinSheenGold</item>
+    </style>
+
+    <style name="ImagePickerTheme" parent="ef_BaseTheme">
+        <item name="colorPrimary">@color/satinSheenGold</item>
+        <item name="colorPrimaryDark">@color/satinSheenGold</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PickerTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabIndicatorColor">@color/burlywood</item>
+        <item name="tabSelectedTextColor">@color/burlywood</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabTextAppearance">@style/PickerTabTextAppearance</item>
+    </style>
+
+    <style name="PickerTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/snow</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/burlywood</item>
+    </style>
+
+    <style name="TooltipTheme" parent="ToolTipLayoutDefaultStyle">
+        <item name="ttlm_padding">15dp</item>
+        <item name="ttlm_backgroundColor">@color/colorAccent</item>
+        <item name="ttlm_cornerRadius">5dp</item>
+        <item name="ttlm_arrowRatio">1.4</item>
+        <item name="android:textAppearance">@style/TooltipTextAppearance</item>
+
+        <!-- font file path inside your assets folder -->
+        <item name="ttlm_font">fonts/tajawal_regular.ttf</item>
+
+        <!-- textview text gravity -->
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TooltipTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/yankeesBlue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

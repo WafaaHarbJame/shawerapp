@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/snow"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/fileNameTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:fontFamily="@font/tajawal_regular"
+      android:maxLines="1"
+      android:textColor="@color/yankeesBlue"
+      android:textSize="@dimen/text_size_12"
+      app:layout_constraintEnd_toStartOf="@+id/fileInfoTextView"
+      app:layout_constraintStart_toEndOf="@+id/showFileBtn"
+      tools:text="File" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/fileInfoTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:fontFamily="@font/tajawal_regular"
+      android:text="@string/label_attachment_info"
+      android:textColor="@color/yankeesBlue"
+      android:textSize="@dimen/text_size_12"
+      app:layout_constraintEnd_toStartOf="@+id/deleteFileBtn"
+      tools:text="(PDF) - 2.5 MB" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:layout_marginTop="8dp"
+      android:background="@color/yankeesBlue"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/fileNameTextView" />
+
+  <ImageButton
+      android:id="@+id/showFileBtn"
+      android:layout_width="16dp"
+      android:layout_height="16dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="2dp"
+      android:background="#00ffffff"
+      android:scaleType="fitCenter"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_show_img" />
+
+  <ImageButton
+      android:id="@+id/deleteFileBtn"
+      android:layout_width="16dp"
+      android:layout_height="16dp"
+      android:layout_marginTop="2dp"
+      android:layout_marginEnd="8dp"
+      android:background="#00ffffff"
+      android:scaleType="fitCenter"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_delete_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

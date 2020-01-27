@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/gradient_gold_with_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_microphone" />
+
+            <ImageButton
+                android:id="@+id/btnConfirmPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_play" />
+
+            <com.shawerapp.android.custom.views.CustomLineBarVisualizer
+                android:id="@+id/voiceProgressBar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/btnConfirmStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_stop_play" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/confirmRecordProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/tajawal_medium"
+                android:gravity="center_vertical"
+                android:text="00:00:00"
+                android:textSize="@dimen/text_size_10"
+                tools:text="00:22:00" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gradient_gold_with_border"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/writeQuestionImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_write_question_dark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/confirmQuestionDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@id/writeQuestionImageView"
+                android:background="@drawable/bg_white_with_border"
+                android:fontFamily="@font/tajawal_regular"
+                android:gravity="start"
+                android:hint="@string/label_compose_question_edit_hint"
+                android:minHeight="@dimen/size_100"
+                android:padding="6dp"
+                android:textSize="@dimen/text_size_12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/confirmWordCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/confirmQuestionDescription"
+                android:layout_alignBottom="@id/confirmQuestionDescription"
+                android:layout_margin="6dp"
+                android:fontFamily="@font/tajawal_regular"
+                android:textSize="@dimen/text_size_8"
+                tools:text="0/300" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/gradient_gold_with_border"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/icon_add_attachment" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/confirmAttachmentList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:minHeight="@dimen/size_60"
+                tools:listitem="@layout/item_attachments" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/imageViewer_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/close_Viewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:text="X"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_chat_left"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatTypeImageView">
+
+        <ImageButton
+            android:id="@+id/downloadImageView"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_download_light" />
+
+        <ImageButton
+            android:id="@+id/showImageView"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/size_24"
+            android:layout_toStartOf="@+id/downloadImageView"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:tint="@color/wheat"
+            app:srcCompat="@drawable/ic_show_img" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/inboundFileDownloadProgress"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_10"
+            android:layout_toStartOf="@id/downloadImageView"
+            android:indeterminateTint="@color/satinSheenGold"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/attachmentInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/downloadImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center_vertical"
+            android:textColor="@color/wheat"
+            android:textSize="@dimen/text_size_8"
+            tools:text="Filename- 500 kb"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_file_light"/>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chatTypeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:background="@color/wheat"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_initial_question_dark"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

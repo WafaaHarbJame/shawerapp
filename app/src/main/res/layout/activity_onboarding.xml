@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.duolingo.open.rtlviewpager.RtlViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/onboarding1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/onboarding1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/size_40"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginEnd="@dimen/size_40"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="center"
+                android:text="@string/onboarding1"
+                android:textColor="@color/eerieBlack"
+                android:textSize="@dimen/text_size_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/onboarding2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/onboarding2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/size_40"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginEnd="@dimen/size_40"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="center"
+                android:text="@string/onboarding2"
+                android:textColor="@color/eerieBlack"
+                android:textSize="@dimen/text_size_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/onboarding3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/onboarding3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/size_40"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginEnd="@dimen/size_40"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="center"
+                android:text="@string/onboarding3"
+                android:textColor="@color/burlywood"
+                android:textSize="@dimen/text_size_20" />
+        </RelativeLayout>
+    </com.duolingo.open.rtlviewpager.RtlViewPager>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_100"
+        android:src="@mipmap/onboarding_icon" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_above="@id/indicator"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/ripple_gold_gradient"
+        android:fontFamily="@font/tajawal_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/size_5"
+        android:text="@string/login_caps"
+        android:textColor="@color/gold_button_text_color"
+        android:textSize="@dimen/text_size_20"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_above="@id/btnLogin"
+        android:layout_marginBottom="@dimen/size_10"
+        android:background="@drawable/ripple_gold_gradient"
+        android:fontFamily="@font/tajawal_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/size_5"
+        android:text="@string/register_caps"
+        android:textColor="@color/gold_button_text_color"
+        android:textSize="@dimen/text_size_20" />
+</RelativeLayout>

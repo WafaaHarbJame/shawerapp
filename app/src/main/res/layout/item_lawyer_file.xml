@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/snow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_15">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:text=""
+                tools:text=""/>
+
+            <View
+                android:id="@+id/clickableView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/radioButton"
+                android:layout_alignEnd="@id/radioButton"
+                android:layout_alignStart="@id/radioButton"
+                android:layout_alignTop="@id/radioButton"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_20"
+            android:src="@mipmap/icon_lawyer_file"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_extrabold"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_16"
+                tools:text="File Name"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_regular"
+                android:maxLines="2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_10"
+                tools:text="This is the description for the file that is uploaded and should have 2 lines"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnView"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:drawableEnd="@drawable/icon_view_file"
+            android:fontFamily="@font/tajawal_regular"
+            android:maxLines="2"
+            android:text="View"
+            android:textAllCaps="false"
+            android:textColor="@color/satinSheenGold"
+            android:textSize="@dimen/text_size_10"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/dirt"/>
+</LinearLayout>

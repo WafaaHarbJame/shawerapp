@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/loginHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/size_70"
+                    android:layout_marginTop="@dimen/size_70"
+                    android:src="@drawable/splash_icon"/>
+
+                <TextView
+                    android:id="@+id/loginMessage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tajawal_extrabold"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/size_20"
+                    android:paddingStart="@dimen/size_20"
+                    android:text="@string/welcome_message"
+                    android:textColor="@color/snow"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:id="@+id/loginMessage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_20"
+                    android:fontFamily="@font/tajawal_light"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/size_20"
+                    android:paddingStart="@dimen/size_20"
+                    android:text="@string/login_message"
+                    android:textColor="@color/snow"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25"
+                android:layout_marginStart="@dimen/size_20"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/icon_close_popup"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/loginContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/loginHeader">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/username"
+                        style="@style/InputFieldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_35"
+                        android:layout_marginBottom="@dimen/size_20"
+                        android:layout_marginEnd="@dimen/size_20"
+                        android:layout_marginStart="@dimen/size_20"
+                        android:layout_marginTop="@dimen/size_20"
+                        android:background="@drawable/input_field_bg"
+                        android:drawableStart="@drawable/selector_icon_user"
+                        android:hint="@string/hint_username_or_email"
+                        android:inputType="text"
+                        android:textAlignment="gravity"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_20"
+                        android:layout_marginEnd="@dimen/size_20"
+                        android:layout_marginStart="@dimen/size_20"
+                        android:textAlignment="gravity"
+                        android:textDirection="locale"
+                        app:hintEnabled="false"
+                        app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/input_field_password_toggle_tint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password"
+                            style="@style/InputFieldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_35"
+                            android:background="@drawable/input_field_bg"
+                            android:drawableStart="@drawable/selector_icon_password"
+                            android:hint="@string/hint_password"
+                            android:inputType="textPassword"
+                            android:textAlignment="gravity"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/text_size_14"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_marginBottom="@dimen/size_10"
+                        android:background="@drawable/ripple_gold_gradient"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="@dimen/size_5"
+                        android:text="@string/login_caps"
+                        android:textColor="@color/gold_button_text_color"
+                        android:textSize="@dimen/text_size_20"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnForgetPassword"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_extrabold"
+            android:text="@string/forget_password"
+            android:textAllCaps="false"
+            android:textColor="@color/snow"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnNew"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_extrabold"
+            android:text="@string/new_here"
+            android:textAllCaps="false"
+            android:textColor="@color/snow"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    tools:background="@color/snow"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/rateNegativeImageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:layout_marginStart="16dp"
+      app:layout_constraintEnd_toStartOf="@+id/ratePositiveImageView"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toStartOf="parent"
+      app:srcCompat="@drawable/icon_rate_lawyer_negative"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ratePositiveImageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:layout_marginStart="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/rateNegativeImageView"
+      app:layout_constraintTop_toTopOf="@+id/rateNegativeImageView"
+      app:srcCompat="@drawable/icon_rate_lawyer_positive"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

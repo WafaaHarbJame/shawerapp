@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/input_field_gold_gradient"/>
+    <item
+        android:bottom="@dimen/size_1"
+        android:left="@dimen/size_1"
+        android:right="@dimen/size_1"
+        android:top="@dimen/size_1">
+        <shape>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</layer-list>

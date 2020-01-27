@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid
+                android:width="@dimen/size_4"
+                android:color="@color/wheat"/>
+            <corners android:topRightRadius="@dimen/size_10"/>
+        </shape>
+    </item>
+    <item android:left="2dp">
+        <shape>
+            <gradient
+                android:centerColor="@color/yankeesBlue"
+                android:endColor="@color/yankeesBlue"
+                android:startColor="@color/independence"/>
+            <corners android:topRightRadius="@dimen/size_10"/>
+        </shape>
+    </item>
+</layer-list>

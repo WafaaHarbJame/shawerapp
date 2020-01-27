@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_memo"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/memoTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="@font/tajawal_bold"
+      android:minLines="3"
+      android:textColor="@color/darkLiver"
+      android:textSize="@dimen/text_size_12"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Lorem ipsum dolor sit amet, egestas leo lectus eu, ut magnis scelerisque in ante pretium integer, lectus donec erat odio, lacus sociosqu aenean arcu in enim eleifend, imperdiet integer nullam. Ante nec. Sunt ut nibh sit eu consectetuer vestibulum, eu amet praesent velit ut, nullam et, vestibulum vestibulum odio. Porttitor sollicitudin faucibus magna ipsum, platea eget, lectus commodo ligula velit imperdiet odio. Suspendisse felis. Donec sem eu, cras in, semper vehicula vitae turpis."
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/dateTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="8dp"
+      android:fontFamily="@font/tajawal_regular"
+      android:textColor="@color/snow"
+      android:textSize="@dimen/text_size_10"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/memoTextView"
+      tools:text="one day ago"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

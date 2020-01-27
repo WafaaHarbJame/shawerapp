@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow"
+    android:layoutDirection="ltr"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_settings_app_logo"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/tajawal_black"
+        android:text="@string/label_settings_app_description2"
+        android:textColor="@color/satinSheenGold"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintBottom_toTopOf="@+id/socialFacebookImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/tajawal_black"
+        android:text="@string/label_settings_app_description1"
+        android:textColor="@color/satinSheenGold"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/socialFacebookImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView12"
+        app:layout_constraintEnd_toStartOf="@+id/socialTwitterImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView11"
+        app:srcCompat="@drawable/icon_link_facebook"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/socialTwitterImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/socialYoutubeImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/socialFacebookImageView"
+        app:layout_constraintTop_toTopOf="@+id/socialFacebookImageView"
+        app:srcCompat="@drawable/icon_link_twitter"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/socialYoutubeImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/socialInstagramImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/socialTwitterImageView"
+        app:layout_constraintTop_toTopOf="@+id/socialTwitterImageView"
+        app:srcCompat="@drawable/icon_link_youtube"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/socialInstagramImageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/socialYoutubeImageView"
+        app:layout_constraintTop_toTopOf="@+id/socialYoutubeImageView"
+        app:srcCompat="@drawable/icon_link_instagram"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tajawal_extrabold"
+        android:text="@string/label_settings_app_name"
+        android:textAllCaps="true"
+        android:textColor="@color/dirt"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/socialFacebookImageView"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appVersionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:fontFamily="@font/tajawal_extrabold"
+        android:text="@string/label_settings_app_version"
+        android:textColor="@color/dirt"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView12"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView12"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="@dimen/size_8"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/tajawal_regular"
+                        android:text="@string/label_settings_coins_balance"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/yankeesBlue"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/remainingCoinsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/tajawal_extrabold"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/yankeesBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="invisible"
+                        tools:text="100 Coin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/addCoinsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableStart="@drawable/icon_settings_add_coins"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/tajawal_regular"
+                        android:text="@string/label_settings_add_coins"
+                        android:textColor="@color/yankeesBlue"
+                        android:textSize="@dimen/text_size_12"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/invoicesBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#00ffffff" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_application_language"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/yankeesBlue"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/tajawal_extrabold"
+                        android:minHeight="@dimen/size_10"
+                        android:text="@string/label_settings_language_english"
+                        android:textColor="@color/yankeesBlue"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/languageSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_20"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/tajawal_extrabold"
+                        android:minHeight="@dimen/size_20"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/tajawal_extrabold"
+                        android:text="@string/label_settings_language_arabic"
+                        android:textColor="@color/yankeesBlue"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_notification"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/yankeesBlue"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/toggleNotificationImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_settings_notification_not_active"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_signout"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/signOutImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_settings_logout"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/termsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_terms_and_conditions"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/privacyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_privacy_policy"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/ratingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_review_app"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view7"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/feedbackContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_feedback_suggestions"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/shareContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_share_app"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+            <LinearLayout
+                android:id="@+id/supportContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="@dimen/size_8"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/label_settings_support"
+                    android:textColor="@color/yankeesBlue"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_arrow_right_dark"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/yankeesBlue"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

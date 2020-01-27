@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/size_50"
+            android:src="@mipmap/icon_lawyer_user"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_20"
+            android:fontFamily="@font/tajawal_extrabold"
+            android:gravity="center"
+            android:text="@string/activate_your_account"
+            android:textColor="@color/eerieBlack"
+            android:textSize="@dimen/text_size_20"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center"
+            android:text="@string/activate_message"
+            android:textColor="@color/eerieBlack"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_30"
+        android:background="@drawable/ripple_gold_gradient"
+        android:fontFamily="@font/tajawal_medium"
+        android:gravity="center_horizontal|bottom"
+        android:includeFontPadding="false"
+        android:text="@string/ok_caps"
+        android:textColor="@color/gold_button_text_color"
+        android:textSize="@dimen/text_size_30"/>
+</RelativeLayout>

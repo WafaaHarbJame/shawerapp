@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_right"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/chatTypeImageView">
+
+        <ImageButton
+            android:id="@+id/showImageView"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24"
+            android:layout_toEndOf="@+id/downloadImageView"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_show_img" />
+
+        <ImageButton
+            android:id="@+id/downloadImageView"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_download_dark" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/outboundFileDownloadProgress"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10"
+            android:layout_toEndOf="@id/downloadImageView"
+            android:indeterminateTint="@color/satinSheenGold"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/attachmentInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/downloadImageView"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="center_vertical"
+            android:textColor="@color/yankeesBlue"
+            android:textSize="@dimen/text_size_8"
+            tools:text="Filename- 500 kb"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/attachmentIconImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_file_dark" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chatTypeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yankeesBlue"
+        android:paddingBottom="2dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_initial_question_light"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

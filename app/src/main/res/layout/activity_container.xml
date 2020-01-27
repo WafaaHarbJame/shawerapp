@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_55"
+        android:background="@color/yankeesBlue"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btnTextLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10"
+            android:fontFamily="@font/tajawal_medium"
+            android:textColor="@color/snow"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/btnToolbarLeft"
+            android:layout_width="@dimen/size_55"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/size_20"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:textColor="@color/snow"
+                android:textSize="@dimen/text_size_23"
+                tools:text="@string/label_tutorial_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbarSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbarTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-8dp"
+                android:fontFamily="@font/tajawal_light"
+                android:maxLines="1"
+                android:textColor="@color/snow"
+                android:textSize="@dimen/text_size_16"
+                tools:text="@string/app_name"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnToolbarRight"
+            android:layout_width="@dimen/size_55"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/size_20" />
+
+        <TextView
+            android:id="@+id/btnTextRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_10"
+            android:fontFamily="@font/tajawal_medium"
+            android:textColor="@color/snow"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomTabs"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="-30dp"
+        android:background="@color/snow"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomTabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_70"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tabContainerLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/yankeesBlue"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tabShawer"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.shawerapp.android.custom.views.CheckableLinearLayout
+                android:id="@+id/tabProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_tab_button"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shawerapp.android.custom.views.CheckableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_profile"/>
+
+                <CheckedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:duplicateParentState="true"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:gravity="center"
+                    android:text="@string/profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="@dimen/text_size_12"/>
+            </com.shawerapp.android.custom.views.CheckableLinearLayout>
+
+            <com.shawerapp.android.custom.views.CheckableLinearLayout
+                android:id="@+id/tabLawyers"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_tab_button"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shawerapp.android.custom.views.CheckableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_lawyers"/>
+
+                <CheckedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:duplicateParentState="true"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:gravity="center"
+                    android:text="@string/lawyers"
+                    android:textAlignment="center"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="@dimen/text_size_12"/>
+            </com.shawerapp.android.custom.views.CheckableLinearLayout>
+        </LinearLayout>
+
+        <com.shawerapp.android.custom.views.CheckableLinearLayout
+            android:id="@+id/tabShawer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ripple_shawer_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tabContainerRight"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tabContainerLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.shawerapp.android.custom.views.CheckableImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/size_5"
+                android:layout_weight="1"
+                android:src="@drawable/tab_shawer" />
+
+            <CheckedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:duplicateParentState="true"
+                android:fontFamily="@font/tajawal_regular"
+                android:gravity="center"
+                android:text="@string/shawer_caps"
+                android:textAlignment="center"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/text_size_12" />
+        </com.shawerapp.android.custom.views.CheckableLinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabContainerRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/yankeesBlue"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/tabShawer">
+
+            <com.shawerapp.android.custom.views.CheckableLinearLayout
+                android:id="@+id/tabPractice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_tab_button"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shawerapp.android.custom.views.CheckableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_practice"/>
+
+                <CheckedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:duplicateParentState="true"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:gravity="center"
+                    android:text="@string/practice"
+                    android:textAlignment="center"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="@dimen/text_size_12"/>
+            </com.shawerapp.android.custom.views.CheckableLinearLayout>
+
+            <com.shawerapp.android.custom.views.CheckableLinearLayout
+                android:id="@+id/tabMore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_tab_button"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.shawerapp.android.custom.views.CheckableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:layout_weight="1"
+                    android:src="@drawable/tab_more"/>
+
+                <CheckedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:duplicateParentState="true"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:gravity="center"
+                    android:text="@string/more"
+                    android:textAlignment="center"
+                    android:textColor="@color/tab_text_color"
+                    android:textSize="@dimen/text_size_12"/>
+            </com.shawerapp.android.custom.views.CheckableLinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

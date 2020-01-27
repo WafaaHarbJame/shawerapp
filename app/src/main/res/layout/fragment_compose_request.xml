@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/primaryInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/tajawal_extrabold"
+        android:gravity="center"
+        android:text="@string/label_compose_request_primary_instruction"
+        android:textColor="@color/eerieBlack"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/secondaryInstructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tajawal_medium"
+        android:text="@string/label_compose_question_sub_description_1"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primaryInstruction"
+        />
+
+    <com.shawerapp.android.custom.views.UnswipeableViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/indicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondaryInstructionTextView"
+        app:layout_constraintVertical_bias="0.0"
+        >
+
+        <include
+            android:id="@+id/compose_step_1"
+            layout="@layout/include_user_create_composition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <include
+            android:id="@+id/compose_step_2"
+            layout="@layout/include_user_review_composition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <include
+            android:id="@+id/compose_step_3"
+            layout="@layout/include_user_submit_composition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </com.shawerapp.android.custom.views.UnswipeableViewPager>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48"
+        android:layout_marginBottom="32dp"
+        app:ci_drawable="@drawable/primary_radius"
+        app:ci_drawable_unselected="@drawable/primary_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

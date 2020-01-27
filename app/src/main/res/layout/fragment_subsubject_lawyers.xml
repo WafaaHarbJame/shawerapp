@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/snow"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/independence"
+        android:drawablePadding="16dp"
+        android:drawableStart="@drawable/ic_icon_search_tiny"
+        android:hint="@string/label_hint_search_lawyer_new_case"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/snow"
+        android:textColorHint="@color/timberwolf"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toStartOf="@+id/filterImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_hireable_lawyer"
+        />
+
+</LinearLayout>

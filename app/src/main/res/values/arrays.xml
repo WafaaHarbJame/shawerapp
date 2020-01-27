@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="label_compose_secondary_instruction">
+        <item>Record, Type &amp; Attach Files</item>
+        <item>Review &amp; Check</item>
+        <item>Pay &amp; Send</item>
+    </string-array>
+    <string-array name="label_compose_request_subtitle">
+        <item>New Practice Request</item>
+        <item>Confirm your Practice Request</item>
+        <item>Pay for Practice Request</item>
+    </string-array>
+    <string-array name="label_compose_question_subtitle">
+        <item>%s</item>
+        <item>Confirm your Question</item>
+        <item>Pay for your Question</item>
+    </string-array>
+    <string-array name="label_compose_answer_subtitle">
+        <item>%s</item>
+        <item>Confirm your Answer</item>
+        <item>Set a Case Status</item>
+        <item>Get Paid for your Answer</item>
+    </string-array>
+    <string-array name="label_compose_answer_secondary_instruction">
+        <item>Record, Type &amp; Attach Files</item>
+        <item>Review &amp; Check</item>
+        <item>What would you like to do with the case?</item>
+        <item>Send &amp; Get Paid</item>
+    </string-array>
+    <string-array name="company_type">
+        <item>@string/hint_company_type</item>
+        <item>Joint Liability Company</item>
+        <item>Limited Partnership</item>
+        <item>Joint Stock Company</item>
+        <item>Holding Company</item>
+        <item>Limited Liability Company</item>
+        <item>Limited Liability Holding Company</item>
+        <item>Joint Sole Company</item>
+        <item>Limited Liability Sole Company</item>
+        <item>Sole Establishment</item>
+        <item>International Company</item>
+        <item>Public Company</item>
+        <item>Educational Institution</item>
+        <item>Government Agency</item>
+        <item>Non Profit Institution</item>
+    </string-array>
+    <string-array name="company_size">
+        <item>@string/hint_company_size</item>
+        <item>Self-employed</item>
+        <item>1–10 employees</item>
+        <item>11–50 employees</item>
+        <item>51–200 employees</item>
+        <item>201–500 employees</item>
+        <item>501–1000 employees</item>
+        <item>1001–5000 employees</item>
+        <item>5001–10,000 employees</item>
+        <item>10,001+ employees</item>
+    </string-array>
+    <string-array name="company_nationality">
+        <item>@string/hint_company_nationality</item>
+        <item>Saudi Arabian</item>
+        <item>Arabian Gulf</item>
+        <item>Middle Eastern</item>
+        <item>Asian</item>
+        <item>European</item>
+        <item>African</item>
+        <item>American</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="countries">
+        <item>@string/hint_country</item>
+        <item>Saudi Arabia</item>
+        <item>United Arab Emirates</item>
+        <item>Bahrain</item>
+        <item>Kuwait</item>
+        <item>Oman</item>
+        <item>Jordan</item>
+        <item>Egypt</item>
+        <item>Lebanon</item>
+    </string-array>
+</resources>

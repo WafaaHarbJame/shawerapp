@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/coinsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/gradient_gold_with_border">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/submitCompositionView"
+                android:layout_width="71dp"
+                android:layout_height="70dp"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_pay" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/serviceFeeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/tajawal_extrabold"
+                android:textColor="@color/yankeesBlue"
+                android:textSize="@dimen/text_size_20"
+                tools:text="20 SAR" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_regular"
+                android:gravity="center"
+                android:text="@string/label_compose_pay_gem"
+                android:textColor="@color/yankeesBlue"
+                android:textSize="@dimen/text_size_12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lawyerPriceLbl"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_size_16"
+                android:fontFamily="@font/tajawal_regular"
+                android:gravity="center"
+                android:text="@string/label_price_mention"
+                android:textColor="@color/yankeesBlue"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

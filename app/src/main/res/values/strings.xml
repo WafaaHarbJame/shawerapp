@@ -1,0 +1,402 @@
+<resources>
+    <string name="app_name">Shawer App</string>
+    <string name="notification_channel_id">Shawer App</string>
+
+    <!-- Errors -->
+    <string name="error_should_not_be_empty">This field should not be empty!</string>
+    <string name="error_default">Oops! Something went wrong..</string>
+    <string name="error_no_user_logged_in">No user logged in</string>
+    <string name="error_email_not_verified">You need to verfiy your email before you can use the app. Verfication email may take up to 30 mintues.</string>
+    <string name="error_email_format">Incorrect email format</string>
+    <string name="error_no_connection">Please check your internet connection</string>
+    <string name="error_file_create">Failed to create file</string>
+
+    <!-- -->
+    <string name="legal_consultations_advices">Legal Consultations &amp; Advices</string>
+    <string name="splash_text_1">إستشارات ونصائح قانونية</string>
+    <string name="signup_message">select your account type &amp; signup</string>
+    <string name="individual">Individual</string>
+    <string name="commercial">Commercial</string>
+    <string name="lawyer">Lawyer</string>
+    <string name="account_type">Account Type</string>
+    <string name="onboarding1">In Shawer you can ask any legal question for a lawyer of your choice</string>
+    <string name="onboarding1_arabic">اختر المجال المطلوب</string>
+    <string name="onboarding2">Consult your lawyer and get legal answers from anywhere in the world</string>
+    <string name="onboarding2_arabic">اختر محاميك المفضل</string>
+    <string name="onboarding3">Request a lawyer to represent you legally and we will find the best for you</string>
+    <string name="onboarding3_arabic">إسأل سؤالك</string>
+    <string name="onboarding4">Get Your Answer</string>
+    <string name="onboarding4_arabic">احصل على إجابتك</string>
+    <string name="register_caps">REGISTER</string>
+    <string name="login_caps">LOGIN</string>
+    <string name="sign_up_caps">SIGN UP</string>
+    <string name="terms_and_privacy_policy_message">By signing up you agree to our terms and conditions and our privacy policy as well</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7</string>
+    <string name="hint_company_name">Company Name</string>
+    <string name="hint_phonenumber">Phone Number</string>
+    <string name="hint_work_email_address">Work Email Address</string>
+    <string name="activate_message">Now follow the instructions\nthat been sent to your email address,\nso you could activate your account\nOr wait for a call from us for more details</string>
+    <string name="activate_your_account">Activate Your Account</string>
+    <string name="ok_caps">OK</string>
+    <string name="validate_message">Enter the 6 digits code you received on your email\naddress, to validate your account &amp; continue</string>
+    <string name="activate_account_caps">ACTIVATE ACCOUNT</string>
+    <string name="resend_question">Didn\'t get the code?</string>
+    <string name="resend">resend it</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="a_b_c">A B C</string>
+    <string name="_3">3</string>
+    <string name="d_e_f">D E F</string>
+    <string name="_4">4</string>
+    <string name="g_h_i">G H I</string>
+    <string name="_5">5</string>
+    <string name="j_k_l">J K L</string>
+    <string name="_6">6</string>
+    <string name="m_n_o">M N O</string>
+    <string name="_7">7</string>
+    <string name="p_q_r_s">P Q R S</string>
+    <string name="_8">8</string>
+    <string name="t_u_v">T U V</string>
+    <string name="_9">9</string>
+    <string name="w_x_y_z">W X Y Z</string>
+    <string name="_0">0</string>
+    <string name="expiry_message">code expires in</string>
+    <string name="default_timer">00:00</string>
+    <string name="welcome_message">Welcome to Shawer App</string>
+    <string name="login_message">login to your account to\nask any legal question or request a practice work</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="new_here">New Here?</string>
+    <string name="forgot_password_message_caps">FORGOT YOUR PASSWORD? DON\'T WORRY</string>
+    <string name="forgot_password_message_2">just type your username or your email address below,\nand we will send you a recovery link\n-if your data exists in our records-</string>
+    <string name="hint_username_or_email">Username or Email Address</string>
+    <string name="type_your_email_address">Type your email address</string>
+    <string name="reset_password_caps">RESET PASSWORD</string>
+    <string name="btn_login_to_account">Login to your account?</string>
+    <string name="reset_password_message1">Your Password Rest Link is On The Way</string>
+    <string name="reset_password_message2">Click on the secure link we just sent you\nto reset your account password\n-Please check your SPAM folder as well-</string>
+    <string name="more">More</string>
+    <string name="practice">Practice</string>
+    <string name="shawer_caps">SHAWER</string>
+    <string name="lawyers">Lawyers</string>
+    <string name="profile">Profile</string>
+    <string name="fullname">Full Name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_birthday">Birthday</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_city">City</string>
+    <string name="hint_current_password">Current Password</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_new_password">Confirm New Password</string>
+    <string name="label_lawyers">Lawyers</string>
+    <string name="label_favorite_list">Favorite List</string>
+    <string name="label_hint_search_lawyer">Search by lawyer username</string>
+    <string name="label_hint_search_user">Search by User Username</string>
+    <string name="menu_title_toggle_favorites">Toggle Favorites</string>
+    <string name="label_profile_questions_raised">Questions</string>
+    <string name="label_profile_answered">Answers</string>
+    <string name="label_profile_likes">Likes</string>
+    <string name="label_profile_experience">Experience</string>
+
+    <string name="label_title_new_question">New Question</string>
+    <string name="label_subtitle_field_selection">Select a field</string>
+    <string name="label_hint_search_field">Search by field or description</string>
+    <string name="label_hint_search_sub_subject">Search by sub-subject or description</string>
+    <string name="label_hint_search_lawyer_new_case">Search in Lawyers Names</string>
+
+    <string name="label_settings_app_description1">إســتــشــارات ونــصــائــح قــانــونــيــة</string>
+    <string name="label_settings_app_description2">Legal Consultations &amp; Advices</string>
+    <string name="label_settings_app_version">Version %1$s</string>
+    <string name="label_settings_app_name">Shawer</string>
+    <string name="label_settings_coins_balance">Invoices</string>
+    <string name="label_settings_application_language">Application Language</string>
+    <string name="label_settings_notification">Notification</string>
+    <string name="label_settings_signout">Sign Out</string>
+    <string name="label_settings_terms_and_conditions">Terms and Conditions</string>
+    <string name="label_settings_privacy_policy">Privacy Policy</string>
+    <string name="label_settings_review_app">Rate the application and review in Play Store</string>
+    <string name="label_settings_feedback_suggestions">Tell us your Feedback &amp; Suggestions</string>
+    <string name="label_settings_share_app">Share the Application and Tell your Friends</string>
+    <string name="label_settings_support">Support</string>
+    <string name="label_settings_remaining_coins">%s SAR</string>
+    <string name="label_settings_add_coins">Add More</string>
+    <string name="label_settings_language_english">English</string>
+    <string name="label_settings_language_arabic">عربي</string>
+
+    <!-- Tutorial -->
+    <string name="label_tutorial_title">How to use</string>
+
+    <!-- Report -->
+    <string name="label_report_title">Report Bad Usage</string>
+    <string name="label_report_subtitle">Select a user from below</string>
+    <string name="label_report_dialog_header">Confirm Your Report</string>
+    <string name="label_report_dialog_content">Your report of bad usage is submitted\n successfully and under review. \n Thank you for your interest</string>
+
+    <!-- Compose Question -->
+    <string name="label_compose_question_default_title">Subject</string>
+    <string name="label_compose_question_title_new_case">New Case</string>
+    <string name="label_compose_question_default_subtitle">Lawyer Name</string>
+    <string name="label_compose_question_subtitle_confirm_case">Confirm your question</string>
+    <string name="label_compose_question_primary_instruction">Ask Your Question to the Lawyer You Picked</string>
+    <string name="label_compose_question_sub_description_1">Record, Type &amp; Attach Files</string>
+    <string name="label_compose_question_sub_description_2">Review &amp; Check</string>
+    <string name="label_compose_question_sub_description_3">Pay &amp; SEND</string>
+    <string name="label_compose_question_edit_hint">Start typing your question here, or your notes. And remember, this field is optional and up to 300 characters.</string>
+    <string name="label_compose_answer_edit_hint">Start typing your answer here, or your notes. And remember, this field is optional and up to 300 characters.</string>
+    <string name="label_attachment_info">%1s - %2s</string>
+    <string name="label_compose_question_fee">%s SAR</string>
+    <string name="label_compose_pay_gem">Tap the Pay icon to pay \n and to send your question</string>
+    <string name="label_compose_confirm_dialog">Congratulations, Your question has been sent. \nAnd %1s SAR had been deducted from your balance too.</string>
+
+    <!-- Request PracticeRequest -->
+    <string name="label_title_requesting_shawer">Requesting Shawer</string>
+    <string name="label_hint_subsubject_name">Search by sub-subject name</string>
+
+
+    <string name="debug_fill_text">Lorem ipsum dolor sit amet, aliquet hendrerit deserunt fringilla semper ratione. Mi mauris. Quam et morbi sodales id cum nulla, praesent nulla donec aptent sed, enim consectetuer sollicitudin tristique quis sed parturient, ullamcorper tristique. Et amet lobortis gravida est et, sit suspendisse rutrum dignissim, nec integer ac hendrerit viverra, bibendum semper, duis ipsum. Donec orci maecenas orci, phasellus non, magna enim quam vitae adipiscing, pulvinar vehicula mus nostra sollicitudin, tempor aliquam consequat ut. Magna curabitur aliquam eget dolor, duis vestibulum dui vehicula. Wisi mollis sit eros non. Nec justo leo pede enim elit, accumsan inceptos nunc consectetuer nunc, nulla nibh maecenas mauris egestas, quam nonummy euismod integer posuere ut, tempor quo tempus bibendum lacinia sagittis massa. Porttitor aliqua, eu praesent lorem aliquam sollicitudin, ullamcorper lorem arcu ornare, lorem ante.</string>
+
+    <!-- New Request-->
+    <string name="label_title_new_request">New Request</string>
+    <string name="label_item_sub_subject_count">%d Sub-Subject</string>
+
+    <!-- Ask PracticeRequest -->
+    <string name="label_title_asking_shawer">Asking Shawer</string>
+
+    <!-- Answer PracticeRequest -->
+    <string name="label_title_answering_shawer">Answering Shawer</string>
+
+    <!-- SubSubject List -->
+    <string name="label_subtitle_select_subsubject">Select a sub-subject</string>
+    <string name="label_sub_subject_lawyer_count">%d Lawyers</string>
+
+    <!-- RequestFee List -->
+    <string name="label_coin_fee">%d SAR</string>
+
+    <!-- Compose New Request -->
+    <string name="label_compose_request_title">New Practice Request</string>
+    <string name="label_compose_request_primary_instruction">Tell us about your case, in details, and we will find the best Lawyer for Your Legal Prosecution</string>
+    <!-- Compose New Request -->
+    <string name="label_compose_response_primary_instruction">Based On The Lawyer Request, \n Send Your Respond</string>
+    <!-- Compose Answert -->
+    <string name="label_compose_answer_primary_instruction">Answer the Question You \n Selected</string>
+    <string name="label_compose_collect_gem">Tap the Send icon to send your answer \n&amp; to collect this amount of coins</string>
+    <!-- Hiring List -->
+    <string name="label_subtitle_select_lawyer">Select a lawyer</string>
+
+    <!-- Buy Coins -->
+    <string name="label_buy_coins_title">SAR</string>
+    <string name="label_buy_coins_subtitle">You have %s SAR</string>
+    <string name="label_compose_answer_status_1">Close the Case</string>
+    <string name="label_compose_answer_status_description_1">And request an evaluation for your\n answer from the user</string>
+    <string name="label_compose_answer_status_2">Keep the Case Open</string>
+    <string name="label_compose_answer_status_description_2">For requesting a feedback on your\n answer to show your interest</string>
+    <string name="label_compose_answer_status_3">Keep the Case Open</string>
+    <string name="label_compose_answer_status_description_3">For requesting more details on the\n question to answer it accurately</string>
+    <string name="label_hint_biaography">Type a short-limited to 250 characters- biography about you to let your profile visitors know you better</string>
+    <string name="hint_profile_bio">Profile Bio</string>
+    <string name="label_request_more_profile_edits">Request More Profile Edits</string>
+    <string name="login_message_2">Enjoy the app and start using it, Don\'t forget to\nshare it &amp; rate it</string>
+    <string name="hint_company_register_number">Company Register Number</string>
+    <string name="hint_company_size">Company Size</string>
+    <string name="hint_company_type">Company Type</string>
+    <string name="hint_company_nationality">Company Nationality</string>
+    <string name="hint_company_formation_date">Company Formation Date</string>
+    <string name="hint_company_phone_number">Company Phone Number</string>
+    <string name="hint_company_headquarters_country">Company Headquarters Country</string>
+    <string name="hint_company_headquarters_city">Company Headquarters City</string>
+    <string name="error_no_user_found">No user with this uid was found</string>
+    <string name="error_invalid_role">Invalid role</string>
+    <string name="error_complete_fields">Please complete all fields</string>
+    <string name="error_input_email_address">Please input an email address</string>
+    <string name="sent_password_reset_email">We\'ve sent a password reset link to your email. Please check and follow instructions from there.</string>
+    <string name="terms_error">You must agree with our terms and conditions before you can continue</string>
+    <string name="message_activation_error">Our team is activating your account. Please wait for a few minutes…</string>
+    <string name="questions">Questions</string>
+    <string name="answers">Answers</string>
+    <string name="rated_answers">Rated Answers</string>
+    <string name="practice_requests">Practice Requests</string>
+    <string name="format_coins">%1$s SAR</string>
+    <string name="zero">0</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_full_name">Add full name</string>
+    <string name="hint_add_profile_bio">Add a short profile bio</string>
+    <string name="hint_position">Position</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="relogin_message1">Please login again</string>
+    <string name="relogin_message2">We just want to make sure it\'s you before we change sensitive information (Email, Password)</string>
+    <string name="message_success_profile">All changes have been updated to your profile</string>
+    <string name="saudi_arabia">Saudi Arabia</string>
+    <string name="error_audio_permission">Please allow this permission to attach files</string>
+    <string name="format_file_info">(%1$s) - %2$s</string>
+    <string name="attachment_camera">Camera</string>
+    <string name="attachment_picture_gallery"><![CDATA[Picture & Video Gallery]]></string>
+    <string name="attachment_documents">Document</string>
+    <string name="title_select_attachments">Select Attachments</string>
+    <string name="format_word_count">%1$d/300</string>
+    <string name="title_error">Error</string>
+    <string name="confirm_your_question">confirm your question</string>
+    <string name="pay_for_your_question">pay for your question</string>
+    <string name="confirm_your_practice_request">confirm your practice request</string>
+    <string name="pay_for_your_practice_request">pay for your practice request</string>
+    <string name="new_practice_request">new practice request</string>
+    <string name="error_compose">Please provide audio or comment.</string>
+    <string name="success_new_question">Congratulations! Your question has been sent. And %1$d SAR has been deducted from your balance too</string>
+    <string name="success_new_practice_request">Congratulations! Your request has been sent. We\'ll reply to you soon. And %1$d SAR has been deducted from your balance too</string>
+    <string name="error_not_enough_coins">Not enough SAR</string>
+    <string name="logout_confirm">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hint_memo_input">Type your memos and thoughts here …</string>
+    <string name="post">Post</string>
+    <string name="success_memo">Successfully added memo</string>
+    <string name="format_profile_bio_count">%1$d/250</string>
+    <string name="format_question_detail_user_type">-%1$s USER-</string>
+    <string name="format_answer_date">The Answer. Answered on %s</string>
+    <string name="format_question_date">The Question. Asked on %s</string>
+    <string name="format_extra_details_date">The Extra Details. Sent on %s</string>
+    <string name="format_attachment_info">%1$s - %2$s</string>
+    <string name="ellipsis">…</string>
+    <string name="pending_message_client1">%1$s still did not answer your question</string>
+    <string name="pending_message_client2">Kindly wait a bit more</string>
+    <string name="pending_message_lawyer1">You still did not answer this question</string>
+    <string name="pending_message_lawyer2">Kindly do, as soon as possible</string>
+    <string name="feedback_message_client1">%1$s answered your question</string>
+    <string name="feedback_message_client2">And requires your feedback on the answer</string>
+    <string name="feedback_message_lawyer1">You answered this question</string>
+    <string name="feedback_message_lawyer2">And required feedback on the answer from the user</string>
+    <string name="details_message_client1">%1$s could not answer your question accurately</string>
+    <string name="details_message_client2">And need more details to do so</string>
+    <string name="details_message_lawyer1">You could not answer this question accurately</string>
+    <string name="details_message_lawyer2">And you needed more details from the user to do so</string>
+    <string name="closed_message_client1">%1$s did answer your question</string>
+    <string name="closed_message_client2">and closes your case. You may now rate the answer</string>
+    <string name="case_closed">Case Closed</string>
+    <string name="closed_message_lawyer_no_rating">And the user did not rate your answer yet</string>
+    <string name="closed_message_lawyer_has_rating">And the user rated your answer as a %1$s answer</string>
+    <string name="label_compose_detail_feedback_primary_instruction">Based On The Lawyer Request, Send Your Respond</string>
+    <string name="confirm_your_respond">confirm your respond</string>
+    <string name="pay_your_respond">pay for your respond</string>
+    <string name="success_respond">Congratulations, Your respond had been sent. And it was free</string>
+    <string name="new_case">NEW CASE</string>
+    <string name="open_case">OPEN CASE</string>
+    <string name="compose_answer_primary_instruction"><![CDATA[Answer the Question You Selected & Collect SAR]]></string>
+    <string name="confirm_your_answer">confirm your answer</string>
+    <string name="set_case_status">set a case status</string>
+    <string name="get_paid_for_your_answer">get paid for your answer</string>
+    <string name="select_a_file">select a file</string>
+    <string name="success_lawyer_answer">Congratulations, Your answer has been sent. And %1$d SAR had been added to your balance as well</string>
+    <string name="request_response_statement1">Great, We found the best match for your practice request. Here are the informations you need to get in touch with the Lawyer:</string>
+    <string name="format_lawyer_name">- Lawyer Name: %1$s</string>
+    <string name="format_lawyer_contact">- Lawyer Contact Number: %1$s</string>
+    <string name="format_lawyer_address">- Lawyer Address: %1$s</string>
+    <string name="format_lawyer_office_name">- Lawyer Office Name: %1$s</string>
+    <string name="format_shawer_promo_code">- Shawer Special Promo Code: %1$s</string>
+    <string name="request_response_statement2">Simply, provide the promo code to the lawyer when you contact him or show him this message; to get a special discount on the fees</string>
+    <string name="request_unfulfilled_status">Your practice request is still under review or awaiting approval from a lawyer kindly wait a bit more</string>
+    <string name="request_fulfilled_status">Your practice request has been reviewed and approved now, just contact the lawyer</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="title_report_user">Confirm Your Report</string>
+    <string name="message_report_user">Your report of bad usage is submitted successfully and under review. Thank you for your interest</string>
+    <string name="message_not_enough_coins">You don\'t have enough SAR to proceed with this case. Would you like to buy now?</string>
+    <string name="error_permission">You need to allow the permission to use this feature</string>
+    <string name="format_purchase">Purchase %1$s %2$s for %3$s?</string>
+    <string name="add_new_memo_caps">ADD NEW MEMO</string>
+    <string name="terms_and_conditions">terms and conditions</string>
+    <string name="privacy_policy">privacy policy</string>
+    <string name="sort_by">Sort By</string>
+    <string name="lawyer_username_ascending">Lawyer Username (A - Z)</string>
+    <string name="lawyer_username_descending">Lawyer Username (Z -A)</string>
+    <string name="likes_descending">Likes (high - low)</string>
+    <string name="likes_ascending">Likes (low - high)</string>
+    <string name="experience_descending">Years of Experience (high - low)</string>
+    <string name="experience_ascending">Years of Experience (low - high)</string>
+    <string name="subsubject_name_ascending">Sub-Subject Name (A -Z)</string>
+    <string name="subsubject_name_descending">Sub-Subject Name (Z -A)</string>
+    <string name="lawyer_name_ascending">Lawyer Name (A - Z)</string>
+    <string name="lawyer_nam_descending">Lawyer Name (Z - A)</string>
+    <string name="cost_descending">Cost (high - low)</string>
+    <string name="cost_ascending">Cost (low - high)</string>
+    <string name="status">Status -default-</string>
+    <string name="success_edit_request">Your request for more profile edits is sent to SHAWER successfully. Wait for an email with instructions from us</string>
+    <string name="has_feedback_message_client1">%1$s has received your feedback</string>
+    <string name="has_feedback_message_client2">Kindly wait for the next action</string>
+    <string name="has_feedback_message_lawyer1">You already sent your answer</string>
+    <string name="has_feedback_message_lawyer2">And user has sent you feedback</string>
+    <string name="has_details_message_client1">%1$s has received the details you sent</string>
+    <string name="has_details_message_client2">Kindly wait for his response</string>
+    <string name="has_details_message_lawyer1">You have required more details</string>
+    <string name="has_details_message_lawyer2">And user has already sent it to you</string>
+    <string name="format_request_date">The Request. Requested on %s</string>
+    <string name="format_respond_date">The Response. Replied on %1$s</string>
+    <string name="label_compose_lawyer_answer_sub_description_3">What would you like to do with the case?</string>
+    <string name="label_compose_lawyer_answer_sub_description_4">SEND &amp; Get Paid</string>
+    <string name="free">FREE</string>
+    <string name="filter_by_country">Filter by Country</string>
+    <string name="no_filter">No Filter</string>
+    <string name="title_confirm">Confirmation</string>
+    <string name="message_exit_compose">Exiting this screen will discard your selected details. Continue?</string>
+    <string name="cancel">Cancel</string>
+    <string name="tooltip_ask_question">New question</string>
+    <string name="tooltip_request_lawyer">New request</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="invalid_input">Invalid Input</string>
+    <string name="label_price_mention">The price mentioned is the price Only coordinate with a lawyer\'s office</string>
+
+    <string name="request_a_practice">Request a practice</string>
+    <string name="request_a_esteshara">Request a consultation</string>
+    <string name="list_of_consultations">List of consultations</string>
+    <string name="list_of_consultations_">List of incoming consultations</string>
+    <string name="list_of_practices">List of practices</string>
+    <string name="didn_t_find_any_practices">Didn\'t find any Practices</string>
+    <string name="didn_t_find_consultaions">Didn\'t find Consultaions</string>
+    <string name="empty" />
+    <string name="invoices">Invoices</string>
+    <string name="invoice">Invoice</string>
+    <string name="request_number">Request Number</string>
+    <string name="bayt_almashowra_information_technology_est">Bayt AlMashowra Information Technology EST</string>
+    <string name="tax_identification_number">Tax Identification Number</string>
+    <string name="order_request">Order Request</string>
+    <string name="invoice_date">Invoice Date</string>
+    <string name="details">Details</string>
+    <string name="sub_total_vat_inclusive">Sub Total Vat Inclusive</string>
+    <string name="vat">VAT</string>
+    <string name="total_vat_collected">Total VAT Collected</string>
+    <string name="the_total_in_not_final_the_invoice_above_it_will_be_to_additional_charges_n_please_see_the_terms_and_conditions">The total in not final. The invoice above it will be to additional charges.  Please see the terms and conditions</string>
+
+    <string name="EstesharaFee">Esteshara Fee</string>
+    <string name="QuestionFee">Question Fee</string>
+    <string name="lawyerOfficeFee">Coordinate fees with lawyer office</string>
+
+    <string name="sar">SAR</string>
+    <string name="payment">Payment</string>
+
+    <string name="Paymentprocessedsuccessfully">Payment processed successfully</string>
+    <string name="Paymentfailed">Payment failed</string>
+    <string name="InvalidSecurityCode">Invalid Security Code</string>
+    <string name="InvalidCardNumber">Invalid Card Number</string>
+    <string name="DuplicatetransactionID">Duplicate transaction ID</string>
+    <string name="select_your_payment">Select Your Payment</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="security_code">Security Code</string>
+    <string name="holder_name">Holder Name</string>
+    <string name="submit">Submit</string>
+    <string name="mada_card">Mada</string>
+    <string name="tryAgain">Try again later…</string>
+    <string name="status_payment_failed">Status : Payment Failed</string>
+    <string name="PaymentprocessednotSuccessfully">Payment Failed</string>
+    <string name="internetDisconnected">Internet seems be disconected</string>
+    <string name="checkout_ui_callback_scheme" translatable="false" >checkoutui</string>
+    <string name="button_ok">ok</string>
+    <string name="progress_message_payment_status">progress_message_payment_status</string>
+    <string name="SuccessPayed">Success payed</string>
+    <string name="failedpay">Payment Failed</string>
+    <string name="failedpayagain">Payment Failed Try again</string>
+    <string name="error_message">An error occurred</string>
+    <string name="message_successful_payment">The payment was successful</string>
+    <string name="message_unsuccessful_payment">فشلت عملية الدفع</string>
+
+</resources>

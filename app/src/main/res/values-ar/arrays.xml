@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="label_compose_secondary_instruction">
+        <item>Record, Type &amp; Attach Files</item>
+        <item>Review &amp; Check</item>
+        <item>Pay &amp; Send</item>
+    </string-array>
+    <string-array name="label_compose_request_subtitle">
+        <item>New Practice Request</item>
+        <item>Confirm your Practice Request</item>
+        <item>Pay for Practice Request</item>
+    </string-array>
+    <string-array name="label_compose_question_subtitle">
+        <item>%s</item>
+        <item>Confirm your Question</item>
+        <item>Pay for your Question</item>
+    </string-array>
+    <string-array name="label_compose_answer_subtitle">
+        <item>%s</item>
+        <item>Confirm your Answer</item>
+        <item>Set a Case Status</item>
+        <item>Get Paid for your Answer</item>
+    </string-array>
+    <string-array name="label_compose_answer_secondary_instruction">
+        <item>Record, Type &amp; Attach Files</item>
+        <item>Review &amp; Check</item>
+        <item>What would you like to do with the case?</item>
+        <item>Send &amp; Get Paid</item>
+    </string-array>
+    <string-array name="company_type">
+        <item>@string/hint_company_type</item>
+        <item>شركة ذات مسؤولية مشتركة</item>
+        <item>شركة ذات شراكة محدودة</item>
+        <item>شركة مساهمة</item>
+        <item>شركة قابضة</item>
+        <item>شركة ذات مسئولية محدودة</item>
+        <item>شركة قابضة ذات مسئولية محدودة</item>
+        <item>شركة ذات شخص واحد</item>
+        <item>شركة فردية ذات مسؤولية محدودة</item>
+        <item>مؤسسة تجارية فردية</item>
+        <item>شركة دولية</item>
+        <item>شركةعامة</item>
+        <item>مؤسسة أكاديمية تعليمية</item>
+        <item>وكالة حكومية</item>
+        <item>مؤسسة خيرية غير ربحية</item>
+    </string-array>
+    <string-array name="company_size">
+        <item>@string/hint_company_size</item>
+        <item>عمل شخصي</item>
+        <item>1–10 موظف</item>
+        <item>11–50 موظف</item>
+        <item>51–200 موظف</item>
+        <item>201–500 موظف</item>
+        <item>501–1000 موظف</item>
+        <item>1001–5000 موظف</item>
+        <item>5001–10,000 موظف</item>
+        <item>أكثر من 10,001 موظف</item>
+    </string-array>
+    <string-array name="company_nationality">
+        <item>@string/hint_company_nationality</item>
+        <item>سعودية</item>
+        <item>خليجية</item>
+        <item>شرق أوسطية</item>
+        <item>أسيوية</item>
+        <item>أوروبية</item>
+        <item>أفريقية</item>
+        <item>أمريكية</item>
+        <item>غير ذلك</item>
+    </string-array>
+    <string-array name="countries">
+        <item>@string/hint_country</item>
+        <item>المملكة العربية السعودية</item>
+        <item>الإمارات العربية المتحدة</item>
+        <item>البحرين</item>
+        <item>الكويت</item>
+        <item>عمان</item>
+        <item>الأردن</item>
+        <item>مصر</item>
+        <item>لبنان</item>
+    </string-array>
+</resources>

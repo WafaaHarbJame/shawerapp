@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/yankeesBlue</color>
+    <color name="colorPrimaryDark">@color/yankeesBlue</color>
+    <color name="colorAccent">@color/timberwolf</color>
+    <color name="error">@color/desire</color>
+
+    <color name="snow">#fffcf6</color>
+    <color name="snowOpaque">#7ffffcf6</color>
+    <color name="wheat">#F0DDAD</color>
+    <color name="burlywood">#DCB975</color>
+    <color name="yankeesBlue">#1B243F</color>
+    <color name="independence">#3A4A73</color>
+    <color name="timberwolf">#DAD5D1</color>
+    <color name="dirt">#A07448</color>
+    <color name="satinSheenGold">#D1A044</color>
+    <color name="eerieBlack">#12182B</color>
+    <color name="ebony">#5f5d5b</color>
+    <color name="blackOpaque30">#4c000000</color>
+    <color name="whiteOpaque30">#4cffffff</color>
+    <color name="desire">#de3c4b</color>
+    <color name="darkLiver">#534B43</color>
+</resources>

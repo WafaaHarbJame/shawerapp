@@ -1,0 +1,404 @@
+<resources>
+    <string name="app_name">تطبيق شاور</string>
+    <string name="notification_channel_id">Shawer App</string>
+
+    <!-- Errors -->
+    <string name="error_should_not_be_empty">خطأ: هذا الحقل لا يجب أن يكون فارغ</string>
+    <string name="error_default">خطأ: المعذرة، حدث خطأ ما.</string>
+    <string name="error_no_user_logged_in">خطأ: لا يوجد مستخدم قام بتسجيل الدخول</string>
+    <string name="error_email_not_verified">خطأ: يجب أن تقوم بتوثيق حساب بريدك الإلكتروني قبل أن تقوم بإستخدام التطبيق. رسالة التوثيق الإلكترونية قد تستغرق ما يقارب 30 دقيقة.</string>
+    <string name="error_email_format">خطأ: صيغة البريد الإلكتروني غير صحيحة</string>
+    <string name="error_no_connection">خطأ: فضلاً تأكد من إتصالك بالإنترنت</string>
+    <string name="legal_consultations_advices">إستشارات ونصائح قانونية</string>
+    <string name="splash_text_1">إستشارات ونصائح قانونية</string>
+    <string name="signup_message">فضلاً اختر نوع الحساب ثم قم بالتسجيل</string>
+    <string name="individual">فردي</string>
+    <string name="commercial">تجاري</string>
+    <string name="lawyer">محامي</string>
+    <string name="account_type">نوع الحساب</string>
+    <string name="onboarding1">في شاور يمكنك طرح أي سؤال قانوني لمحامي من إختيارك</string>
+    <string name="onboarding1_arabic">اختر المجال المطلوب</string>
+    <string name="onboarding2">استشر محاميك واحصل على الإجابة القانونية من أي مكان في العالم</string>
+    <string name="onboarding2_arabic">اختر محاميك المفضل</string>
+    <string name="onboarding3">قم بطلب محامي يمثلك قضائياً والمرافعة عنك وسنبحث لك عن الأفضل</string>
+    <string name="onboarding3_arabic">قم بطرح سؤالك القانوني</string>
+    <string name="onboarding4">احصل على إجابتك</string>
+    <string name="onboarding4_arabic">احصل على إجابتك القانونية</string>
+    <string name="register_caps">تسجيل الحساب</string>
+    <string name="login_caps">الدخول إلى الحساب</string>
+    <string name="sign_up_caps">إنشاء حساب</string>
+    <string name="terms_and_privacy_policy_message">بالضغط على زر التسجيل، فأنت توافق على الشروط والأحكام الخاصة بشاور وكذلك سياسة الخصوصية.</string>
+    <string name="hint_username">اسم المستخدم</string>
+    <string name="hint_email_address">البريد الإلكتروني</string>
+    <string name="hint_password">\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7</string>
+    <string name="hint_company_name">اسم الشركة</string>
+    <string name="hint_phonenumber">رقم الهاتف</string>
+    <string name="hint_work_email_address">عنوان البريد الإلكتروني الخاص بالعمل</string>
+    <string name="activate_message">قم بإتباع التعليمات المرسلة إلى بريدك الإلكتروني المسجل مسبقاً،\nلتتمكن من تفعيل حسابك أو انتظر منا إتصال\nلرقم هاتفك لمزيد من التفاصيل</string>
+    <string name="activate_your_account">قم بتفعيل حسابك</string>
+    <string name="ok_caps">موافق</string>
+
+    <!-- NOT in the app any more -->
+    <string name="validate_message">Enter the 6 digits code you received on your email\naddress, to validate your account &amp; continue</string>
+    <string name="activate_account_caps">تفعيل الحساب</string>
+    <string name="resend_question">Didn\'t get the code?</string>
+    <string name="resend">resend it</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="a_b_c">A B C</string>
+    <string name="_3">3</string>
+    <string name="d_e_f">D E F</string>
+    <string name="_4">4</string>
+    <string name="g_h_i">G H I</string>
+    <string name="_5">5</string>
+    <string name="j_k_l">J K L</string>
+    <string name="_6">6</string>
+    <string name="m_n_o">M N O</string>
+    <string name="_7">7</string>
+    <string name="p_q_r_s">P Q R S</string>
+    <string name="_8">8</string>
+    <string name="t_u_v">T U V</string>
+    <string name="_9">9</string>
+    <string name="w_x_y_z">W X Y Z</string>
+    <string name="_0">0</string>
+    <string name="expiry_message">code expires in</string>
+    <string name="default_timer">00:00</string>
+    <!-- NOT in the app any more -->
+
+    <string name="welcome_message">أهلاً بك في تطبيق شاور</string>
+    <string name="login_message">قم بتسجيل الدخول لحسابك لتتمكن من طرح أي سؤال\nقانوني جديد أو لطلب تعيين محامي</string>
+    <string name="forget_password">نسيت كلمة المرور؟</string>
+    <string name="new_here">ليس لديك حساب؟</string>
+    <string name="forgot_password_message_caps">هل نسيت كلمة المرور؟ لا تقلق</string>
+    <string name="forgot_password_message_2">فقط قم بكتابة اسم المستخدم الخاص بك أو عنوان البريد الإلكتروني\nفي الأسفل، وسنقوم بإرسال رابط لإستعادة كلمة المرور\n-في حال كانت بياناتك مسجلة لدينا-</string>
+    <string name="hint_username_or_email">اسم المستخدم أو البريد الإلكتروني</string>
+    <string name="type_your_email_address">اكتب عنوان البريد الإلكتروني الخاص بك</string>
+    <string name="reset_password_caps">إستعادة كلمة المرور</string>
+    <string name="btn_login_to_account">تسجيل الدخول إلى حسابك</string>
+    <string name="reset_password_message1">رابط إستعادة كلمة المرور في طريقه إليك</string>
+    <string name="reset_password_message2">اضغط على الرابط المرسل إليك لإستعادة كلمة المرور\nالخاصة بك. )تأكد من صندوق الرسائل الغير مرغوب بها(</string>
+    <string name="more">المزيد</string>
+    <string name="practice">المرافعات</string>
+    <string name="shawer_caps">شاور</string>
+    <string name="lawyers">المحامون</string>
+    <string name="profile">الرئيسية</string>
+    <string name="fullname">الاسم الكامل</string>
+    <string name="hint_gender">الجنس</string>
+    <string name="hint_birthday">تاريخ الميلاد</string>
+    <string name="hint_country">الدولة</string>
+    <string name="hint_city">المدينة</string>
+    <string name="hint_current_password">كلمة المرور الحالية</string>
+    <string name="hint_new_password">كلمة المرور الجديدة</string>
+    <string name="hint_confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+    <string name="label_lawyers">المحامون</string>
+    <string name="label_favorite_list">قائمة المفضلة</string>
+    <string name="label_hint_search_lawyer">ابحث باسم المحامي أو اسم المستخدم</string>
+    <string name="label_hint_search_user">ابحث باسم المستخدم</string>
+    <string name="menu_title_toggle_favorites">Toggle Favorites</string>
+    <string name="label_profile_questions_raised">الأسئلة</string>
+    <string name="label_profile_answered">الأجوبة</string>
+    <string name="label_profile_likes">الإعجابات</string>
+    <string name="label_profile_experience">الخبرة</string>
+
+    <string name="label_title_new_question">إستشارة جديدة</string>
+    <string name="label_subtitle_field_selection">اختر مجال</string>
+    <string name="label_hint_search_field">ابحث باسم المجال أو وصفه</string>
+    <string name="label_hint_search_sub_subject">ابحث باسم المجال الفرعي أو وصفه</string>
+    <string name="label_hint_search_lawyer_new_case">ابحث باسم المحامي</string>
+
+    <string name="label_settings_app_description1">إســتــشــارات ونــصــائــح قــانــونــيــة</string>
+    <string name="label_settings_app_description2">Legal Consultations &amp; Advices</string>
+    <string name="label_settings_app_version">%1$s إصدار رقم</string>
+    <string name="label_settings_app_name">Shawer</string>
+    <string name="label_settings_coins_balance">الفواتير</string>
+    <string name="label_settings_application_language">لغة التطبيق</string>
+    <string name="label_settings_notification">التنبيهات</string>
+    <string name="label_settings_signout">تسجيل الخروج</string>
+    <string name="label_settings_terms_and_conditions">الشروط والأحكام</string>
+    <string name="label_settings_privacy_policy">سياسة الخصوصية</string>
+    <string name="label_settings_review_app">قيم التطبيق واكتب تعليقك عنه في متجر التطبيق</string>
+    <string name="label_settings_feedback_suggestions">أخبرنا بإقتراحاتك وملاحظاتك</string>
+    <string name="label_settings_share_app">شارك التطبيق وأخبر أصدقائك</string>
+    <string name="label_settings_support">الدعم الفني</string>
+    <string name="label_settings_remaining_coins">%s ريال</string>
+    <string name="label_settings_add_coins">اضف المزيد</string>
+    <string name="label_settings_language_english">English</string>
+    <string name="label_settings_language_arabic">عربي</string>
+
+    <!-- Tutorial -->
+    <string name="label_tutorial_title">طريقة الإستخدام</string>
+
+    <!-- Report -->
+    <string name="label_report_title">التبليغ عن سوء الإستخدام</string>
+    <string name="label_report_subtitle">اختر اسم مستخدم من القائمة أدناه</string>
+    <string name="label_report_dialog_header">أكد بلاغك</string>
+    <string name="label_report_dialog_content">تم إرسال بلاغك عن سوء إستخدام التطبيق بنجاح،\nوجاري التأكد منه.\nشكراً لإهتمامك بتحسين شاور</string>
+
+    <!-- Compose Question -->
+    <string name="label_compose_question_default_title">الموضوع</string>
+    <string name="label_compose_question_title_new_case">قضية جديدة</string>
+    <string name="label_compose_question_default_subtitle">اسم المحامي</string>
+    <string name="label_compose_question_subtitle_confirm_case">تأكد من سؤالك</string>
+    <string name="label_compose_question_primary_instruction">إسأل سؤالك للمحامي الذي اخترته</string>
+    <string name="label_compose_question_sub_description_1">سجل، اكتب وارفق ملفاتك</string>
+    <string name="label_compose_question_sub_description_2">راجع وتأكد</string>
+    <string name="label_compose_question_sub_description_3">ادفع وارسل طلبك</string>
+    <string name="label_compose_question_edit_hint">إبدأ بكتابة سؤالك القانوني هنا، أو ملاحظاتك النصية. وتذكر، هذا الحقل إختياري ومحدود بعدد 300 حرف.</string>
+    <string name="label_compose_answer_edit_hint">إبدأ بكتابة إجابتك هنا، أو ملاحظاتك. وتذكر أن هذا الحقل إختياري ومحدود بعدد 300 حرف.</string>
+    <string name="label_attachment_info">%1s - %2s</string>
+    <string name="label_compose_question_fee">%s ريال</string>
+    <string name="label_compose_pay_gem">قم بالضغط على ايقونة الدفع للدفع وإرسال طلبك للمحامي</string>
+    <string name="label_compose_confirm_dialog">تهانينا،\nلقد تم إرسال سؤالك.\nوتم خصم %1s ريال من رصيدك أيضًا</string>
+
+    <!-- Request PracticeRequest -->
+    <string name="label_title_requesting_shawer">اطلب شاور</string>
+    <string name="label_hint_subsubject_name">ابحث باسم المجال الفرعي</string>
+
+    <string name="progress_message_payment_status">progress_message_payment_status</string>
+
+    <string name="debug_fill_text">Lorem ipsum dolor sit amet, aliquet hendrerit deserunt fringilla semper ratione. Mi mauris. Quam et morbi sodales id cum nulla, praesent nulla donec aptent sed, enim consectetuer sollicitudin tristique quis sed parturient, ullamcorper tristique. Et amet lobortis gravida est et, sit suspendisse rutrum dignissim, nec integer ac hendrerit viverra, bibendum semper, duis ipsum. Donec orci maecenas orci, phasellus non, magna enim quam vitae adipiscing, pulvinar vehicula mus nostra sollicitudin, tempor aliquam consequat ut. Magna curabitur aliquam eget dolor, duis vestibulum dui vehicula. Wisi mollis sit eros non. Nec justo leo pede enim elit, accumsan inceptos nunc consectetuer nunc, nulla nibh maecenas mauris egestas, quam nonummy euismod integer posuere ut, tempor quo tempus bibendum lacinia sagittis massa. Porttitor aliqua, eu praesent lorem aliquam sollicitudin, ullamcorper lorem arcu ornare, lorem ante.</string>
+
+    <!-- New Request-->
+    <string name="label_title_new_request">طلب جديد</string>
+    <string name="label_item_sub_subject_count">%d مجال فرعي</string>
+
+    <!-- Ask PracticeRequest -->
+    <string name="label_title_asking_shawer">إسأل شاور</string>
+
+    <!-- Answer PracticeRequest -->
+    <string name="label_title_answering_shawer">اجب عن شاور</string>
+
+    <!-- SubSubject List -->
+    <string name="label_subtitle_select_subsubject">اختر مجال فرعي</string>
+    <string name="label_sub_subject_lawyer_count">%d محامي</string>
+
+    <!-- RequestFee List -->
+    <string name="label_coin_fee">%d ريال</string>
+
+    <!-- Compose New Request -->
+    <string name="label_compose_request_title">طلب مرافعة جديد</string>
+    <string name="label_compose_request_primary_instruction">أخبرنا عن قضيتك، بالتفصيل. وسنقوم بالبحث نيابةً عنك عن أفضل محامي لتمثيلك قضائياً</string>
+    <!-- Compose New Request -->
+    <string name="label_compose_response_primary_instruction">بحسب طلب المحامي، قم بإرسال إجابتك</string>
+    <!-- Compose Answert -->
+    <string name="label_compose_answer_primary_instruction">قم بالإجابة على السؤال الذي اخترته\nلتحصل على عملاتك</string>
+    <string name="label_compose_collect_gem">قم بالضغط على ايقونة ارسال لإرسال ردك للعميل،\nوالحصول على عملاتك</string>
+    <!-- Hiring List -->
+    <string name="label_subtitle_select_lawyer">اختر محامي</string>
+
+    <!-- Buy Coins -->
+    <string name="label_buy_coins_title">اشتر المزيد</string>
+    <string name="label_buy_coins_subtitle">ريال %s لديك</string>
+    <string name="label_compose_answer_status_1">أغلق القضية</string>
+    <string name="label_compose_answer_status_description_1">واطلب تقييم العميل لإجابتك</string>
+    <string name="label_compose_answer_status_2">أبقِـي القضية مفتوحة</string>
+    <string name="label_compose_answer_status_description_2">واطلب متابعة لإجابتك من العميل،\nكنوع من المتابعة الشخصية للقضية وإهتمامك بها</string>
+    <string name="label_compose_answer_status_3">أبقِـي القضية مفتوحة</string>
+    <string name="label_compose_answer_status_description_3">واطلب مزيداً من المعلومات،\nلتتمكن من الإجابة بشكل أفضل وأدق</string>
+    <string name="label_hint_biaography">إبدأ بكتابة سيرتك الذاتية المختصرة هنا، ليتمكن زوارك من معرفتك بشكل أفضل. وتذكر، هذا الحقل محدود بعدد 250 حرف.</string>
+    <string name="hint_profile_bio">السيرة الذاتية المختصرة</string>
+    <string name="label_request_more_profile_edits">اطلب المزيد من التعديلات لملفك الشخصي</string>
+    <string name="login_message_2">استمتع بالتطبيق الان، وإبدأ بطرح أسئلتك القانونية، ولا تنسى مشاركة التطبيق وتقيمه</string>
+    <string name="hint_company_register_number">رقم السجل التجاري للشركة</string>
+    <string name="hint_company_size">حجم الشركة</string>
+    <string name="hint_company_type">نوع الشركة</string>
+    <string name="hint_company_nationality">جنسية الشركة</string>
+    <string name="hint_company_formation_date">تاريخ تأسيس الشركة</string>
+    <string name="hint_company_phone_number">رقم هاتف الشركة</string>
+    <string name="hint_company_headquarters_country">دولة مقر الشركة الرئيسي</string>
+    <string name="hint_company_headquarters_city">مدينة مقر الشركة الرئيسي</string>
+    <string name="error_no_user_found">خطأ: لم يتم العثور على المستخدم</string>
+    <string name="error_invalid_role">خطأ: النوع غير صحيح</string>
+    <string name="error_complete_fields">خطأ: فضلاً قم بتعبئة جميع الحقول</string>
+    <string name="error_input_email_address">خطأ: فضلاً قم بكتابة عنوان بريدك الإلكتروني</string>
+    <string name="sent_password_reset_email">تم إرسال رابط لإستعادة كلمة المرور، فضلاً قم بفتح بريدك لاإلكتروني واتبع التعليمات المرسلة فيه</string>
+    <string name="terms_error">يجب أن توافق على الشروط والأحكام الخاصة بالتطبيق قبل البدء في إستخدام التطبيق</string>
+    <string name="message_activation_error">يقوم فريق شاور بتنشيط حسابك حالياً، فضلاً انتظر قليلاً …</string>
+    <string name="questions">الأسئلة</string>
+    <string name="answers">الأجوبة</string>
+    <string name="rated_answers">الإجابات المقيمة</string>
+    <string name="practice_requests">طلبات المرافعة</string>
+    <string name="format_coins">%1$s ريال</string>
+    <string name="zero">0</string>
+    <string name="hint_name">الاسم الكامل</string>
+    <string name="hint_full_name">الاسم الكامل</string>
+    <string name="hint_add_profile_bio">اضف سيرة ذاتية مختصرة لملفك الشخصي</string>
+    <string name="hint_position">المسمى الوظيفي</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="relogin_message1">فضلاً قم بتسجيل الدخول مرة أخرى</string>
+    <string name="relogin_message2">نريد فقط التأكيد بأنك مالك الحساب قبل أن نقوم بتغيير بعض المعلومات الحساسة (كبريدك الإلكتروني، وكلمة المرور)</string>
+    <string name="message_success_profile">تم تحديث جميع البيانات إلى ملفك الشخصي</string>
+    <string name="saudi_arabia">المملكة العربية السعودية</string>
+    <string name="error_audio_permission">فضلاً قم بالسماح لطلب التصريح هذا لتتمكن من إرفاق المرفقات الخاصة</string>
+    <string name="format_file_info">(%1$s) - %2$s</string>
+    <string name="attachment_camera">الكاميرا</string>
+    <string name="attachment_picture_gallery"><![CDATA[معرض الصور]]></string>
+    <string name="attachment_documents">المستندات</string>
+    <string name="title_select_attachments">اختر المرفقات</string>
+    <string name="format_word_count">%1$d/300</string>
+    <string name="title_error">خطأ</string>
+    <string name="confirm_your_question">تأكد من سؤالك</string>
+    <string name="pay_for_your_question">ادفع مقابل طلب إستشارتك</string>
+    <string name="confirm_your_practice_request">تأكد من طلبك للمرافعة</string>
+    <string name="pay_for_your_practice_request">ادفع مقابل طلبك للمرافعة</string>
+    <string name="new_practice_request">طلب مرافعة جديد</string>
+    <string name="error_compose">فضلاً قم بكتابة ملاحظاتك أو قم بتسجيل طلبك</string>
+    <string name="success_new_question">تهانينا، لقد تم إرسال سؤالك. وتم خصم %1$d ريال من رصيدك أيضاً</string>
+    <string name="success_new_practice_request">من رصيدك أيضاً تهانينا، لقد تم إرسال طلبك. سنقوم بالرد عليك قريباً. وتم خصم %1$d ريال</string>
+    <string name="error_not_enough_coins">لا يوجد لديك الرصيد الكافي من العملات</string>
+    <string name="logout_confirm">هل أنت متأكد من تسجيل الخروج</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="hint_memo_input">اكتب بعض أفكارك أو كتاباتك هنا …</string>
+    <string name="post">انشر</string>
+    <string name="success_memo">تم إضافة المنشور بنجاح</string>
+    <string name="format_profile_bio_count">%1$d/250</string>
+    <string name="format_question_detail_user_type">-%1$s مستخدم-</string>
+    <string name="error_file_create">خطأ: تعذر إنشاء الملف</string>
+    <string name="format_answer_date">تمت الإجابة %s</string>
+    <string name="format_question_date">تم طرح السؤال %s</string>
+    <string name="format_extra_details_date">تم إرسال التفاصيل المطلوبة %s</string>
+    <string name="format_attachment_info">%1$s - %2$s</string>
+    <string name="ellipsis">…</string>
+    <string name="pending_message_client1">%1$s لم يتم الرد على طلبك حتى الأن.</string>
+    <string name="pending_message_client2">فضلاً انتظر قليلاً</string>
+    <string name="pending_message_lawyer1">ما زلت لم تقم بالإجابة على هذا السؤال. </string>
+    <string name="pending_message_lawyer2">فضلاً قم بالإجابة في أسرع وقت</string>
+    <string name="feedback_message_client1">%1$s تم الرد على طلبك،</string>
+    <string name="feedback_message_client2">ويمكنك إضافة معلومات أخرى للمتابعة بحسب طلب المحامي</string>
+    <string name="feedback_message_lawyer1">قمت بالإجابة على هذا السؤال،</string>
+    <string name="feedback_message_lawyer2">وتم طلب ملاحظات العميل للمتابعة على جوابك</string>
+    <string name="details_message_client1">%1$s الرد على طلبك غير دقيق بسبب قلة التفاصيل،</string>
+    <string name="details_message_client2">فضلاً قم بإرسال المزيد من المعلومات</string>
+    <string name="details_message_lawyer1">بسبب عدم توفر معلومات كافية، فلم تستطع الإجابة عى هذا السؤال،</string>
+    <string name="details_message_lawyer2">تم طلب مزيد من المعلومات من العميل لتتمكن من الإجابة</string>
+    <string name="closed_message_client1">%1$s تم الرد على طلبك،</string>
+    <string name="closed_message_client2">وتم إغلاق قضيتك، تستطيع الأن تقييم المحامي والجواب</string>
+    <string name="case_closed">تم الإنتهاء من هذه القضية القانونية وتم إغلاقها</string>
+    <string name="closed_message_lawyer_no_rating">وفي إنتظار تقييم العميل</string>
+    <string name="closed_message_lawyer_has_rating">وتم تقييم إجابتك من قِـبل العميل بـ  %1$s</string>
+    <string name="label_compose_detail_feedback_primary_instruction">بحسب طلب المحامي، قم بإرسال إجابتك</string>
+    <string name="confirm_your_respond">تأكد من ردك</string>
+    <string name="pay_your_respond">قم بالدفع لإرسال ردك</string>
+    <string name="success_respond">تهانينا، لقد تم إرسال ردك. وقد كان مجاني</string>
+    <string name="new_case">قضية جديدة</string>
+    <string name="open_case">قضية مفتوحة</string>
+    <string name="compose_answer_primary_instruction">قم بالإجابة على السؤال الذي اخترته لتحصل على عملاتك</string>
+    <string name="confirm_your_answer">تأكد من إجابتك</string>
+    <string name="set_case_status">ضع حالة للقضية</string>
+    <string name="get_paid_for_your_answer">احصل على عملاتك مقابل إجابتك</string>
+    <string name="select_a_file">اختر ملف</string>
+    <string name="success_lawyer_answer">تهانينا، لقد تم إرسال إجابتك. وتم إضافة %1$d ريال إلى رصيدك أيضاً</string>
+    <string name="request_response_statement1">رائع ، لقد وجدنا أفضل محامي ليقوم بالترافع عنك. إليك المعلومات التي تحتاجها للتواصل مع المحامي:</string>
+    <string name="format_lawyer_name">- اسم المحامي: %1$s</string>
+    <string name="format_lawyer_contact">- رقم الاتصال بالمحامي: %1$s</string>
+    <string name="format_lawyer_address">- عنوان المحامي: %1$s</string>
+    <string name="format_lawyer_office_name">- اسم مكتب المحامي: %1$s</string>
+    <string name="format_shawer_promo_code">- كود تخفيض شاور: %1$s</string>
+    <string name="request_response_statement2">ببساطة ، قم بتوفير كود التخفيض للمحامي عند الاتصال به أو أظهر هذه الرسالة له؛ لتحصل على خصمك الخاص.</string>
+    <string name="request_unfulfilled_status">طلبك للمرافعة ما زال تحت المراجعة أو ما زال في إنتظار موافقة المحامي لقبوله. نرجوا الانتظار لمزيد من الوقت</string>
+    <string name="request_fulfilled_status">تمت مراجعة طلبك للمرافعة والموافقة عليه من قبل المحامي. الأن تستطيع التواصل مع المحامي الظاهرة بياناته أدناه</string>
+    <string name="search_by_name">ابحث باسم المستخدم</string>
+    <string name="title_report_user">أكد بلاغك</string>
+    <string name="message_report_user">شكراً لإهتمامك بتحسين شاور تم إرسال بلاغك عن سوء إستخدام التطبيق بنجاح، وجاري التأكد منه</string>
+    <string name="message_not_enough_coins">ليس لديك الرصيد الكافي لمتابعة القضية، هل تود الشراء الأن؟</string>
+    <string name="error_permission">خطأ: يجب أن تقوم بالسماح بهذا التصريح للتطبيق لتتمكن من إستخدامه</string>
+    <string name="format_purchase">هل تود شراء باقة (%1$s) والتي تحتوي %2$s ريال، وذلك مقابل %3$s؟</string>
+    <string name="add_new_memo_caps">اضف منشور جديد</string>
+    <string name="terms_and_conditions">الشروط والأحكام</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="sort_by">ترتيب حسب</string>
+    <string name="lawyer_username_ascending">ترتيب باسم المحامي (تصاعدي)</string>
+    <string name="lawyer_username_descending">ترتيب باسم المحامي (تنازلي)</string>
+    <string name="likes_descending">عددا لإعجابات (الأكثر إلى الأقل)</string>
+    <string name="likes_ascending">عددا لإعجابات (الأقل إلى الأكثر)</string>
+    <string name="experience_descending">عدد سنوات الخبرة (الأكثر إلى الأقل)</string>
+    <string name="experience_ascending">عدد سنوات الخبرة (الأقل إلى الأكثر)</string>
+    <string name="subsubject_name_ascending">اسم ا لمجال الفرعي (تصاعدي)</string>
+    <string name="subsubject_name_descending">اسم ا لمجال الفرعي (تنازلي)</string>
+    <string name="lawyer_name_ascending">اسم ا لمحامي (تصاعدي)</string>
+    <string name="lawyer_nam_descending">اسم ا لمحامي (تنازلي)</string>
+    <string name="cost_descending">التكلفة (ا لأكثر إلى ا لأقل)</string>
+    <string name="cost_ascending">التكلفة (ا لأقل إلى ا لأكثر)</string>
+    <string name="status">الحالة -إفتراضي-</string>
+    <string name="success_edit_request">تم إرسال طلبك لتعديل ا لم زيد من بيانات ملفك الشخصي إلى شاور بنجاح، انتظر رسالتنا على عنوان بريدك ا لإلكتروني لم زيد من التفاصيل</string>
+    <string name="has_feedback_message_client1">استلم المحامي %1$s تعقيبك</string>
+    <string name="has_feedback_message_client2">فضلاً انتظر للإجراء القادم</string>
+    <string name="has_feedback_message_lawyer1">قمت مسبقاً بإرسال إجابتك</string>
+    <string name="has_feedback_message_lawyer2">وقام المستخدم بإرسال تعقيبه الخاص</string>
+    <string name="has_details_message_client1">قام المحامي %1$s بإستلام التفاصيل التي أرسلتها</string>
+    <string name="has_details_message_client2">فضلاً إنتظر الرد في أقرب وقت</string>
+    <string name="has_details_message_lawyer1">قمت بطلب المزيد من التفاصيل</string>
+    <string name="has_details_message_lawyer2">وقام المستخدم بإرسالها مسبقاً</string>
+    <string name="format_request_date">الطلب، تم في %1$s</string>
+    <string name="format_respond_date">الرد، تم في %1$s</string>
+    <string name="label_compose_lawyer_answer_sub_description_3">ماذا تريد أن يكون وضع القضية؟</string>
+    <string name="label_compose_lawyer_answer_sub_description_4">ارسل، واحصل على عملاتك</string>
+    <string name="free">مجاناً</string>
+    <string name="filter_by_country">تصفية بحسب الدولة</string>
+    <string name="no_filter">بدون تصفية</string>
+    <string name="title_confirm">تأكيد</string>
+    <string name="message_exit_compose">الخروج من هذه الصفحة، سيقوم بمسح البيانات المدخلة بها. هل تريد الإستمرار؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="tooltip_ask_question">إسأل سؤالك هنا</string>
+    <string name="tooltip_request_lawyer">إطلب محاميك هنا</string>
+    <string name="next">التالي</string>
+    <string name="back">الرجوع</string>
+    <string name="invalid_input">حدث خطأ</string>
+    <string name="label_price_mention">السعر المذكور هو سعر التنسيق مع مكتب المحامي</string>
+
+    <string name="request_a_practice">طلب مرافعة</string>
+    <string name="request_a_esteshara">طلب استشارة</string>
+    <string name="list_of_consultations">طلبات الاستشارة</string>
+    <string name="list_of_consultations_">طلبات الاستشارة الواردة</string>
+    <string name="list_of_practices">قائمة المرافعات</string>
+    <string name="didn_t_find_any_practices">لا توجد طلبات</string>
+    <string name="didn_t_find_consultaions">لا توجد طلبات استشارة</string>
+    <string name="empty" />
+    <string name="invoices">الفواتير</string>
+    <string name="invoice">فاتورة</string>
+    <string name="request_number">رقم الطلب</string>
+
+    <string name="bayt_almashowra_information_technology_est">مؤسسة بيت المشورة لتقنية المعلومات</string>
+    <string name="tax_identification_number">رقم التعريف الضريبي</string>
+    <string name="order_request">رقم الطلب</string>
+    <string name="invoice_date">تاريخ الفاتورة</string>
+    <string name="details">التفاصيل</string>
+    <string name="sub_total_vat_inclusive">الاجمالي شامل الضريبة</string>
+    <string name="vat">معدل ضريبة القيمة المضافة</string>
+    <string name="total_vat_collected">اجمالي ضريبة القيمة المضافة التي تم جمعها</string>
+    <string name="the_total_in_not_final_the_invoice_above_it_will_be_to_additional_charges_n_please_see_the_terms_and_conditions">الاجمالي غير نهائي حيث تخضع الفاتورة اعلاه الي رسوم اضافية . نرجو الاطلاع علي الشروط و الاحكام</string>
+
+    <string name="EstesharaFee">رسوم استشارة</string>
+    <string name="QuestionFee">رسوم سؤال</string>
+    <string name="lawyerOfficeFee">رسوم تنسيق مكتب محاماة لطلب مرافعة</string>
+
+    <string name="sar">ريال</string>
+    <string name="payment">الدفع</string>
+
+    <string name="Paymentprocessedsuccessfully">تم الدفع بنجاح</string>
+    <string name="Paymentfailed">فشل عملية الدفع</string>
+    <string name="InvalidSecurityCode">كود الحمايه خاطئ</string>
+    <string name="InvalidCardNumber">رقم البطاقة غير صحيح</string>
+    <string name="DuplicatetransactionID">معرف المعاملة مكرر … يرجي المحاولة لاحقا </string>
+    <string name="select_your_payment">اختر طريقة الدفع</string>
+    <string name="credit_card">بطاقة ائتمانية</string>
+    <string name="card_number">رقم البطاقة</string>
+    <string name="security_code">الكود السري</string>
+    <string name="holder_name">اسم حامل البطاقة</string>
+    <string name="submit">اتمام الدفع</string>
+    <string name="mada_card">بطاقة مدي</string>
+    <string name="tryAgain">فشل … يرجي المحاولة لاحقاً …</string>
+    <string name="status_payment_failed">الحالة : العملية فشلت</string>
+    <string name="PaymentprocessednotSuccessfully">فشل عملية الدفع</string>
+    <string name="internetDisconnected">يبدو أن الإنترنت غير متصل</string>
+    <string name="button_ok">ok</string>
+    <string name="SuccessPayed">Success payed</string>
+    <string name="failedpay">Payment Failed</string>
+    <string name="failedpayagain">Payment Failed Try again</string>
+    <string name="error_message">An error occurred</string>
+    <string name="message_successful_payment">The payment was successful</string>
+    <string name="message_unsuccessful_payment">فشلت عملية الدفع</string>
+
+</resources>

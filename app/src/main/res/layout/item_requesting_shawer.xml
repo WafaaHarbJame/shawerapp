@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/snow">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_court"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/tajawal_extrabold"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorPrimary"
+        android:textDirection="locale"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionTextView"
+        app:layout_constraintEnd_toStartOf="@+id/feeTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Sub-Subject Name"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/tajawal_regular"
+        android:maxLines="1"
+        android:textAlignment="gravity"
+        android:textColor="@color/blackOpaque30"
+        android:textDirection="locale"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/feeTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        tools:text="Shawer App"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/feeTextView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/gold_gradient"
+        android:drawablePadding="2dp"
+        android:fontFamily="@font/tajawal_extrabold"
+        android:gravity="center_vertical|bottom"
+        android:includeFontPadding="false"
+        android:paddingBottom="@dimen/size_2"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:paddingTop="@dimen/size_4"
+        android:textAlignment="gravity"
+        android:textColor="@color/dirt"
+        android:textDirection="locale"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+        app:layout_constraintEnd_toStartOf="@+id/statusImageView"
+        app:layout_constraintTop_toTopOf="@+id/iconImageView"
+        tools:text="100"/>
+    <!--android:drawableStart="@drawable/icon_gem_tiny"-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/statusImageView"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/arrowIndicatorImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gold_gradient_circle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/arrowIndicatorImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iconImageView"
+        app:srcCompat="@drawable/icon_arrow_right"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/dirt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTextView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

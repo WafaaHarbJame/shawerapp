@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lawyerProfileEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/snow">
+
+        <RelativeLayout
+            android:id="@+id/profileHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yankeesBlue"
+            app:layout_constraintHeight_percent="0.2">
+
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_100"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/size_20"
+                android:layout_marginTop="@dimen/size_20"
+                android:background="@drawable/gold_gradient_circle"
+                android:src="@mipmap/icon_profile_default"/>
+
+            <ImageView
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_alignBottom="@id/profilePicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/size_5"
+                android:src="@drawable/icon_profile_pic_edit"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_20"
+            app:layout_constraintBottom_toTopOf="@+id/btnRequestEdit"
+            app:layout_constraintTop_toBottomOf="@id/profileHeader">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_username"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/username"
+                style="@style/InputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                android:drawableStart="@drawable/selector_icon_user"
+                android:drawableEnd="@mipmap/icon_profile_edit"
+                android:hint="@string/hint_username"
+                android:inputType="text"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/fullname"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/InputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                android:drawableStart="@drawable/selector_icon_user"
+                android:drawableEnd="@mipmap/icon_profile_edit"
+                android:hint="@string/fullname"
+                android:inputType="text"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_email_address"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/emailAddress"
+                style="@style/InputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                android:drawableEnd="@mipmap/icon_profile_edit"
+                android:drawableStart="@drawable/selector_icon_email"
+                android:hint="@string/hint_email_address"
+                android:inputType="textEmailAddress"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_phonenumber"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                style="@style/InputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                android:drawableEnd="@mipmap/icon_profile_edit"
+                android:drawableStart="@drawable/selector_icon_phonenumber"
+                android:hint="@string/hint_phonenumber"
+                android:inputType="number"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_gender"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <Spinner
+                android:id="@+id/genderChooser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                tools:lisitem="@layout/item_gender_display"/>
+
+            <LinearLayout
+                android:id="@+id/birthdayContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/hint_birthday"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiver"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <TextView
+                    android:id="@+id/birthday"
+                    style="@style/InputFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_35"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:background="@drawable/input_field_bg"
+                    android:drawableEnd="@mipmap/icon_down"
+                    android:drawableStart="@drawable/selector_profile_calendar"
+                    android:hint="@string/hint_birthday"
+                    android:textAlignment="gravity"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_country"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <Spinner
+                android:id="@+id/countryChooser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                tools:lisitem="@layout/item_country_display"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_city"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <EditText
+                android:id="@+id/city"
+                style="@style/InputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_marginBottom="@dimen/size_5"
+                android:background="@drawable/input_field_bg"
+                android:drawableEnd="@mipmap/icon_profile_edit"
+                android:drawableStart="@drawable/selector_profile_place"
+                android:hint="@string/hint_city"
+                android:inputType="text"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                android:textSize="@dimen/text_size_14"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profileBioLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="@string/hint_profile_bio"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiver"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <EditText
+                    android:id="@+id/profileBio"
+                    style="@style/InputFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_150"
+                    android:layout_below="@id/profileBioLabel"
+                    android:layout_marginBottom="@dimen/size_5"
+                    android:background="@drawable/input_field_bg"
+                    android:gravity="top"
+                    android:hint="@string/label_hint_biaography"
+                    android:inputType="textMultiLine"
+                    android:maxLength="250"
+                    android:paddingEnd="@dimen/size_55"
+                    android:paddingStart="@dimen/size_45"
+                    android:textAlignment="gravity"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/profileBioCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/profileBio"
+                    android:layout_alignEnd="@id/profileBio"
+                    android:layout_margin="@dimen/size_5"
+                    android:fontFamily="@font/tajawal_regular"
+                    android:text="0/250"
+                    android:textColor="@color/yankeesBlue"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/profileBioCount"
+                    android:layout_alignEnd="@id/profileBioCount"
+                    android:layout_alignStart="@id/profileBioCount"
+                    android:src="@mipmap/icon_profile_edit"/>
+
+                <ImageView
+                    android:id="@+id/profileBioImageHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/profileBio"
+                    android:layout_alignTop="@id/profileBio"
+                    android:layout_margin="@dimen/size_15"
+                    android:src="@mipmap/icon_profile_bio_inactive"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_current_password"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/input_field_password_toggle_tint">
+
+                <EditText
+                    android:id="@+id/currentPassword"
+                    style="@style/InputFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_35"
+                    android:background="@drawable/input_field_bg"
+                    android:drawableEnd="@mipmap/icon_down"
+                    android:drawableStart="@drawable/selector_profile_key"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:textAlignment="gravity"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_new_password"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/input_field_password_toggle_tint">
+
+                <EditText
+                    android:id="@+id/newPassword"
+                    style="@style/InputFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_35"
+                    android:background="@drawable/input_field_bg"
+                    android:drawableEnd="@mipmap/icon_down"
+                    android:drawableStart="@drawable/selector_profile_key"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:textAlignment="gravity"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:fontFamily="@font/tajawal_regular"
+                android:text="@string/hint_confirm_new_password"
+                android:textAllCaps="true"
+                android:textColor="@color/darkLiver"
+                android:textSize="@dimen/text_size_16"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5"
+                android:textAlignment="gravity"
+                android:textDirection="locale"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/selector_password_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/input_field_password_toggle_tint">
+
+                <EditText
+                    android:id="@+id/confirmNewPassword"
+                    style="@style/InputFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_35"
+                    android:background="@drawable/input_field_bg"
+                    android:drawableEnd="@mipmap/icon_down"
+                    android:drawableStart="@drawable/selector_profile_key"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:textAlignment="gravity"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRequestEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginBottom="@dimen/size_40"
+            android:background="@drawable/ripple_gold_gradient"
+            android:fontFamily="@font/tajawal_medium"
+            android:gravity="center_horizontal|bottom"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/size_8"
+            android:text="@string/label_request_more_profile_edits"
+            android:textColor="@color/gold_button_text_color"
+            android:textSize="@dimen/text_size_20"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

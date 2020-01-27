@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/gradient_yankee_with_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:tint="@color/wheat"
+            app:srcCompat="@drawable/icon_microphone"/>
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/size_5"
+            android:tint="@color/wheat"
+            app:srcCompat="@drawable/icon_record"/>
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/size_5"
+            android:tint="@color/wheat"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon_play"/>
+
+        <com.shawerapp.android.custom.views.AudioRecordVisualizer
+            android:id="@+id/visualizer"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:numColumns="50"
+            app:renderColor="@color/wheat"
+            app:renderRange="both"
+            app:renderType="bar"/>
+
+        <ImageButton
+            android:id="@+id/btnStopRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/size_5"
+            android:src="@drawable/icon_stop_play"
+            android:tint="@color/wheat"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/recordingProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/tajawal_medium"
+            android:gravity="center_vertical"
+            android:text="00:00:00"
+            android:textColor="@color/wheat"
+            android:textSize="@dimen/text_size_10"
+            tools:text="00:22:00"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/gradient_yankee_with_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/writeQuestionImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_write_question_dark"
+            app:tint="@color/wheat"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/questionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/writeQuestionImageView"
+            android:background="@drawable/bg_white_with_border"
+            android:fontFamily="@font/tajawal_regular"
+            android:gravity="start"
+            android:hint="@string/label_compose_answer_edit_hint"
+            android:maxLength="300"
+            android:minHeight="@dimen/size_100"
+            android:padding="6dp"
+            android:textSize="@dimen/text_size_12"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wordCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/questionEditText"
+            android:layout_alignBottom="@+id/questionEditText"
+            android:layout_alignParentBottom="@id/questionEditText"
+            android:layout_margin="6dp"
+            android:fontFamily="@font/tajawal_regular"
+            android:textSize="@dimen/text_size_8"
+            tools:text="0/300"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/gradient_yankee_with_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_add_attachment"
+            app:tint="@color/wheat"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attachmentList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:minHeight="@dimen/size_60"
+            tools:listitem="@layout/item_attachments"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAttach"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/icon_attach_button"
+            app:tint="@color/wheat" />
+    </LinearLayout>
+</LinearLayout>

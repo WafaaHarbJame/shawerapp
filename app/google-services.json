@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "630121799799",
+    "firebase_url": "https://shawerapp-c8594.firebaseio.com",
+    "project_id": "shawerapp-c8594",
+    "storage_bucket": "shawerapp-c8594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630121799799:android:10ef303069dc93d1",
+        "android_client_info": {
+          "package_name": "com.shawerapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630121799799-6qu0c7acn12n2tqher4o609dd1sb7f77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shawerapp.android",
+            "certificate_hash": "8d78a77a1356be280a7c17520ae4aac1d1e18630"
+          }
+        },
+        {
+          "client_id": "630121799799-o4hb94fmpdjqljj1rr6363tp72p2s1ah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDFRlCpp_-2kqc6rFLXhgUXGjH-3iII3Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630121799799-o4hb94fmpdjqljj1rr6363tp72p2s1ah.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "630121799799-qheu03r7k9hhicv1mag9qfqd0d49fbsh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.shawerapp.ios"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

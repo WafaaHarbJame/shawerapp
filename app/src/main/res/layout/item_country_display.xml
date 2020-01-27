@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/InputFieldStyle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_35"
+    android:layout_marginBottom="@dimen/size_5"
+    android:background="@drawable/input_field_bg"
+    android:drawableEnd="@mipmap/icon_down"
+    android:drawableStart="@drawable/selector_profile_place"
+    android:textAlignment="gravity"
+    android:textDirection="locale"
+    android:textSize="@dimen/text_size_14"
+    tools:text="Country"/>

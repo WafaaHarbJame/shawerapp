@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    tools:background="@color/snow"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/messageTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:background="@drawable/bg_chat_left"
+      android:fontFamily="@font/tajawal_regular"
+      android:padding="8dp"
+      android:textColor="@color/wheat"
+      android:textSize="@dimen/text_size_10"
+      app:layout_constraintEnd_toStartOf="@+id/guideline"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/chatTypeImageView"
+      tools:text="@string/debug_fill_text"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.7"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/chatTypeImageView"
+      android:layout_width="wrap_content"
+      android:layout_height="18dp"
+      android:background="@color/wheat"
+      android:paddingBottom="2dp"
+      android:paddingLeft="6dp"
+      android:paddingRight="6dp"
+      android:paddingTop="2dp"
+      android:scaleType="centerInside"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/icon_initial_request_dark"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>

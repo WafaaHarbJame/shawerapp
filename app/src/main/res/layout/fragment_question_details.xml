@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yankeesBlue">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/gold_gradient_circle"
+            android:src="@mipmap/icon_profile_default"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/tajawal_medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/snow"
+            android:textSize="@dimen/text_size_18"
+            tools:text="Lawyer Username"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameTextView"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/tajawal_light"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/snow"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone"
+            app:textAllCaps="true"
+            tools:text="-User Type-"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subSubjectTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userTypeTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/tajawal_extrabold"
+            android:maxLines="1"
+            android:textColor="@color/snow"
+            android:textSize="@dimen/text_size_18"
+            tools:text="Sub-subject name"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:background="@color/snow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/answersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_20"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:fontFamily="@font/tajawal_black"
+                    android:gravity="center"
+                    android:textColor="@color/eerieBlack"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="you answered this question and required feedback on the answer from the user"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_20"
+                    android:layout_marginStart="@dimen/size_20"
+                    android:fontFamily="@font/tajawal_black"
+                    android:gravity="center"
+                    android:text="@string/ellipsis"
+                    android:textColor="@color/eerieBlack"
+                    android:textSize="@dimen/text_size_12"/>
+
+                <LinearLayout
+                    android:id="@+id/ratingButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnDislike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="@dimen/size_5"
+                        android:src="@drawable/icon_rate_lawyer_negative"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/btnLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="@dimen/size_5"
+                        android:src="@drawable/icon_rate_lawyer_positive"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/imageViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/loadImageImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/closeImgBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/text_size_16"
+            android:layout_marginEnd="@dimen/text_size_16"
+            android:text="X"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
