@@ -4,9 +4,11 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.backend.base.RealTimeDataFramework;
 import com.shawerapp.android.base.BaseActivity;
 import com.shawerapp.android.base.BaseFragment;
@@ -72,6 +74,9 @@ public class ContainerViewModel implements ContainerContract.ViewModel {
 
     @Inject
     LoginUtil mLoginUtil;
+    SharedPManger sharedPManger;
+    String type;
+
 
     @Inject
     RealTimeDataFramework mRTDataFramework;
@@ -90,6 +95,16 @@ public class ContainerViewModel implements ContainerContract.ViewModel {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        sharedPManger=new SharedPManger(mActivity);
+
+        type=sharedPManger.getDataString(ContainerActivity.EXTRA_TYPE);
+      //  Toast.makeText(mActivity, ""+type, Toast.LENGTH_SHORT).show();
+        if(mType==null){
+
+            mType=type;
+        }
+
         mView.initBindings(mType);
         initializeBackstack(savedInstanceState);
 

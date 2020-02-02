@@ -1,5 +1,6 @@
 package com.shawerapp.android.screens.payment;
 
+import com.shawerapp.android.Payment.PaymentActivity;
 import com.shawerapp.android.base.BaseFragment;
 import com.shawerapp.android.base.FragmentScope;
 
@@ -16,6 +17,8 @@ public class PaymentModule {
     mFragment = fragment;
     mView = view;
   }
+
+
 
   @FragmentScope
   @Provides

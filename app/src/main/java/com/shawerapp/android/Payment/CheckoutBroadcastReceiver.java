@@ -28,7 +28,6 @@ public class CheckoutBroadcastReceiver extends BroadcastReceiver {
                some specific parameters or just send back the same checkout id to continue checkout process */
             intent = new Intent(CheckoutActivity.ACTION_ON_BEFORE_SUBMIT);
             intent.setComponent(senderComponentName);
-            assert senderComponentName != null;
             intent.setPackage(senderComponentName.getPackageName());
 
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

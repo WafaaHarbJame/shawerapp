@@ -84,4 +84,22 @@
         <item name="android:textColor">@color/yankeesBlue</item>
         <item name="android:textSize">12sp</item>
     </style>
+
+
+    <style name="NewCheckoutTheme" parent="Theme.Checkout.Light">
+        <item name="headerBackground">@color/independence</item>
+        <item name="cancelButtonTintColor">@android:color/white</item>
+        <item name="listMarkTintColor">@color/independence</item>
+        <item name="cameraTintColor">@color/independence</item>
+        <item name="checkboxButtonTintColor">@color/independence</item>
+
+        <item name="checkoutButtonStyle">@style/NewCheckoutTheme.Button</item>
+    </style>
+
+    <style name="NewCheckoutTheme.Button" parent="Checkout.Button.Light">
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+
+
 </resources>

@@ -240,7 +240,6 @@ public class ApplicationModel extends MultiDexApplication {
 
         Invoice invoice_ = Invoice.builder()
                 .collection("invoices")
-
                 .orderDate(new Date())
                 .orderRequestNumber(orderRequestNumber)
                 .orderVat("0.0%")

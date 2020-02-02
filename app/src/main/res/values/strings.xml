@@ -185,7 +185,7 @@
     <string name="label_subtitle_select_lawyer">Select a lawyer</string>
 
     <!-- Buy Coins -->
-    <string name="label_buy_coins_title">SAR</string>
+    <string name="label_buy_coins_title">buy alot</string>
     <string name="label_buy_coins_subtitle">You have %s SAR</string>
     <string name="label_compose_answer_status_1">Close the Case</string>
     <string name="label_compose_answer_status_description_1">And request an evaluation for your\n answer from the user</string>
@@ -389,7 +389,7 @@
     <string name="status_payment_failed">Status : Payment Failed</string>
     <string name="PaymentprocessednotSuccessfully">Payment Failed</string>
     <string name="internetDisconnected">Internet seems be disconected</string>
-    <string name="checkout_ui_callback_scheme" translatable="false" >checkoutui</string>
+    <string name="checkout_ui_callback_scheme" translatable="false">checkoutui</string>
     <string name="button_ok">ok</string>
     <string name="progress_message_payment_status">progress_message_payment_status</string>
     <string name="SuccessPayed">Success payed</string>
@@ -397,6 +397,10 @@
     <string name="failedpayagain">Payment Failed Try again</string>
     <string name="error_message">An error occurred</string>
     <string name="message_successful_payment">The payment was successful</string>
-    <string name="message_unsuccessful_payment">فشلت عملية الدفع</string>
+    <string name="message_unsuccessful_payment">The payment was unsuccessful</string>
+    <string name="progress_message_checkout_id">Getting the checkout id…</string>
+    <string name="payment_button_callback_scheme">paymentbutton</string>
+    <string name="custom_ui_callback_scheme">customui</string>
+    <string name="sdk_version_number">mobile sdk v%s</string>
 
 </resources>

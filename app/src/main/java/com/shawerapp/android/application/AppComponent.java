@@ -2,6 +2,8 @@ package com.shawerapp.android.application;
 
 import android.app.Application;
 
+import com.shawerapp.android.Payment.PaymentActivityComponent;
+import com.shawerapp.android.Payment.PaymentActivityModule;
 import com.shawerapp.android.backend.base.AuthFramework;
 import com.shawerapp.android.backend.base.BackendModule;
 import com.shawerapp.android.backend.base.BillingFramework;
@@ -42,6 +44,8 @@ import dagger.Component;
 public interface AppComponent {
     void inject(ApplicationModel app);
 
+    void inject(PaymentActivityModule paymentActivityModule);
+
     void inject(AppFirebaseInstanceIDService service);
 
     void inject(AppFirebaseMessagingService appFirebaseMessagingService);
@@ -62,6 +66,8 @@ public interface AppComponent {
 
     SplashComponent plus(SplashModule splashModule);
 
+    //PaymentActivityComponent plus(PaymentActivityModule paymentActivityModule);
+
     OnboardingComponent plus(OnboardingModule onboardingModule);
 
     SignupComponent plus(SignupModule signupModule);
@@ -77,4 +83,6 @@ public interface AppComponent {
     ResetPasswordSentComponent plus(ResetPasswordSentModule resetPasswordSentModule);
 
     ContainerComponent plus(ContainerModule containerModule);
+
+   PaymentActivityComponent plus(PaymentActivityModule paymentActivityModule);
 }

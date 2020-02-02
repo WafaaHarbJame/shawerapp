@@ -7,13 +7,17 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.shawerapp.android.GlobalData;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.adapter.item.HireableLawyerFlexible;
 import com.shawerapp.android.autovalue.Field;
 import com.shawerapp.android.autovalue.LawyerUser;
@@ -38,8 +42,13 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
     public static final String ARG_REQUEST_TYPE = "requestType";
 
     public static final String ARG_SELECTED_FIELD = "selectedField";
+    public  static String Laweryid="Laweryid";
 
     public static final String ARG_SELECTED_SUBSUBJECT = "selectedSubSubject";
+    SharedPManger sharedPManger;
+    public  String Laweryid1;
+
+
 
     public static SelectLawyerFragment newInstance(int requestType, Field selectedField, SubSubject selectedSubSubject) {
 
@@ -49,6 +58,12 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
         args.putParcelable(ARG_SELECTED_SUBSUBJECT, selectedSubSubject);
         SelectLawyerFragment fragment = new SelectLawyerFragment();
         fragment.setArguments(args);
+        Laweryid=selectedField.uid();
+        Log.e("Laweryidf", "Laweryidf" + Laweryid);
+        GlobalData.lawyerId =Laweryid;
+
+
+
         return fragment;
     }
 
@@ -68,6 +83,12 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_select_lawyer, container, false);
         mUnbinder = ButterKnife.bind(this, view);
+        sharedPManger=new SharedPManger(getContext());
+        Laweryid1=Laweryid;
+       sharedPManger.SetData("lawer_id",Laweryid1);
+        Log.e("Laweryidcreate", "Laweryidcreate" + Laweryid);
+
+
 
         return view;
     }
@@ -143,6 +164,8 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
     public boolean onItemClick(View view, int position) {
         final HireableLawyerFlexible item = mLawyersAdapter.getItem(position);
         if (item != null) {
+            sharedPManger.SetData("lawer_id",Laweryid1);
+
             mViewModel.onLawyerClicked(item.getLawyerUser());
         }
 

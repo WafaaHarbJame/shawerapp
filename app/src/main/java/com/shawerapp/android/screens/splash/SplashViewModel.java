@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.autovalue.CommercialUser;
 import com.shawerapp.android.autovalue.IndividualUser;
 import com.shawerapp.android.autovalue.LawyerUser;
@@ -28,6 +29,7 @@ public class SplashViewModel implements SplashContract.ViewModel {
     private BaseActivity mActivity;
 
     private SplashContract.View mView;
+    SharedPManger sharedPManger;
 
     @Inject
     RealTimeDataFramework mRTDataFramework;
@@ -46,8 +48,12 @@ public class SplashViewModel implements SplashContract.ViewModel {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         mView.initBindings();
+        sharedPManger=new SharedPManger(mActivity);
+
         mView.startSplashAnimation();
+
     }
 
     @SuppressLint("CheckResult")
@@ -96,6 +102,7 @@ public class SplashViewModel implements SplashContract.ViewModel {
     public void showContainerActivity(String type) {
         Intent intent = new Intent(mActivity, ContainerActivity.class);
         intent.putExtra(ContainerActivity.EXTRA_TYPE, type);
+        sharedPManger.SetData(ContainerActivity.EXTRA_TYPE,type);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mActivity.finish();
         mActivity.startActivity(intent);

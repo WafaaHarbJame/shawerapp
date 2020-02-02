@@ -135,9 +135,11 @@ public final class InvoiceFragment extends BaseFragment implements InvoiceContra
 
         orderDateTxt.setText(date);
         if (invoice.orderType() != null) {
-            if (Objects.requireNonNull(invoice.orderType()).equals("Esteshara Fee") || Objects.requireNonNull(invoice.orderType()).equals("رسوم استشارة")) {
+            if (Objects.requireNonNull(invoice.orderType()).equals("Esteshara Fee") ||
+                    Objects.requireNonNull(invoice.orderType()).equals("رسوم استشارة")) {
                 orderTypeTxt.setText(getString(R.string.EstesharaFee));
-            } else if (Objects.requireNonNull(invoice.orderType()).equals("Question Fee") || Objects.requireNonNull(invoice.orderType()).equals("رسوم سؤال")) {
+            } else if (Objects.requireNonNull(invoice.orderType()).equals("Question Fee")
+                    || Objects.requireNonNull(invoice.orderType()).equals("رسوم سؤال")) {
                 orderTypeTxt.setText(getString(R.string.QuestionFee));
             } else {
                 orderTypeTxt.setText(getString(R.string.lawyerOfficeFee));

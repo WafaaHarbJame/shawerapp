@@ -109,8 +109,11 @@ public abstract class Invoice implements Parcelable {
         return mapped;
     }
 
-    public static Invoice create(String uid, String orderVatPrice, String orderVat, String orderTypePrice, String orderType,
-                                 String orderSubTotal, String orderRequestNumber, Date orderDate, String collection, String UserUid, String LawyerUid,
+    public static Invoice
+    create(String uid, String orderVatPrice,
+           String orderVat, String orderTypePrice, String orderType,
+                                 String orderSubTotal, String orderRequestNumber,
+           Date orderDate, String collection, String UserUid, String LawyerUid,
             String paid) {
         return builder()
                 .uid(uid)

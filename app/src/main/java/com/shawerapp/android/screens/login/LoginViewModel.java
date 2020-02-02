@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.shawerapp.android.MainActivity;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.autovalue.CommercialUser;
 import com.shawerapp.android.autovalue.IndividualUser;
 import com.shawerapp.android.autovalue.LawyerUser;
@@ -39,6 +40,8 @@ public class LoginViewModel implements LoginContract.ViewModel {
     private BaseActivity mActivity;
 
     private LoginContract.View mView;
+    SharedPManger sharedPManger;
+
 
     @Inject
     AuthFramework mAuthFramework;
@@ -59,8 +62,12 @@ public class LoginViewModel implements LoginContract.ViewModel {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+
+    {
         mView.initBindings();
+        sharedPManger=new SharedPManger(mActivity);
+
     }
 
     @Override
@@ -97,7 +104,10 @@ public class LoginViewModel implements LoginContract.ViewModel {
                     .flatMap(userUid -> mRTDataFramework.fetchUser(userUid)
                             .flatMapMaybe(user -> {
                                 if (user instanceof IndividualUser &&
-                                        ((IndividualUser) user).status().equalsIgnoreCase(IndividualUser.Status.ACTIVATED)) {
+                                        ((IndividualUser) user).status().equalsIgnoreCase
+                                                (IndividualUser.Status.ACTIVATED)) {
+                                    sharedPManger.SetData("uid",mLogintUtil.getUserID());
+
                                     mLogintUtil.setUserRole(IndividualUser.ROLE_VALUE);
                                     mLogintUtil.setUsername(((IndividualUser) user).username());
                                     FirebaseMessaging.getInstance().subscribeToTopic("individual")
@@ -109,12 +119,17 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                 } else if (user instanceof CommercialUser &&
                                         ((CommercialUser) user).status().equalsIgnoreCase(CommercialUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUsername(((CommercialUser) user).username());
+                                    sharedPManger.SetData("uid",mLogintUtil.getUserID());
+
                                     mLogintUtil.setUserRole(CommercialUser.ROLE_VALUE);
                                     return Maybe.just(ContainerActivity.TYPE_COMMERCIAL);
                                 } else if (user instanceof LawyerUser &&
                                         ((LawyerUser) user).status().equalsIgnoreCase(LawyerUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUserRole(LawyerUser.ROLE_VALUE);
                                     mLogintUtil.setUsername(((LawyerUser) user).username());
+
+                                    sharedPManger.SetData("uid",mLogintUtil.getUserID());
+
                                     FirebaseMessaging.getInstance().subscribeToTopic("lawyer")
                                             .addOnCompleteListener(task -> {
 
@@ -169,6 +184,8 @@ public class LoginViewModel implements LoginContract.ViewModel {
                 type -> {
                     Intent intent = new Intent(mActivity, ContainerActivity.class);
                     intent.putExtra(ContainerActivity.EXTRA_TYPE, type);
+                    sharedPManger.SetData("uid",mLogintUtil.getUserID());
+                    sharedPManger.SetData(ContainerActivity.EXTRA_TYPE,type);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     mActivity.finish();
                     mActivity.startActivity(intent);

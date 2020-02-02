@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Checkable;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import com.jakewharton.rxbinding2.view.RxView;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.application.ApplicationModel;
 import com.shawerapp.android.base.ActivityLifecycle;
 import com.shawerapp.android.base.BaseActivity;
@@ -42,13 +44,15 @@ public class ContainerActivity extends BaseActivity implements ContainerContract
 
     private static final long ANIM_DURATION = 150;
 
-    public static final String EXTRA_TYPE = "type";
+    public static String EXTRA_TYPE = "type";
 
     public static final String TYPE_INDIVIDUAL = "INDIVIDUAL";
 
     public static final String TYPE_COMMERCIAL = "COMMERCIAL";
 
     public static final String TYPE_LAWYER = "LAWYER";
+    public  String type;
+    SharedPManger sharedPManger;
 
     @BindView(R.id.toolbar)
     ViewGroup mToolbar;
@@ -111,8 +115,15 @@ public class ContainerActivity extends BaseActivity implements ContainerContract
         mContainerComponent = ((ApplicationModel) getApplication()).getAppComponent()
                 .plus(new ContainerModule(this, this));
         mContainerComponent.inject(this);
+          setContentView(R.layout.activity_container);
 
-        setContentView(R.layout.activity_container);
+        sharedPManger=new SharedPManger(ContainerActivity.this);
+
+        type=sharedPManger.getDataString(ContainerActivity.EXTRA_TYPE);
+      //  Toast.makeText(this, ""+type, Toast.LENGTH_SHORT).show();
+        EXTRA_TYPE=type;
+
+
         ButterKnife.bind(this);
         super.onCreate(savedInstanceState);
     }
@@ -124,6 +135,7 @@ public class ContainerActivity extends BaseActivity implements ContainerContract
 
     @Override
     public void initBindings(String type) {
+
         if (type.equals(TYPE_LAWYER)) {
             mTabLawyers.setVisibility(View.GONE);
             mTabPractice.setVisibility(View.GONE);

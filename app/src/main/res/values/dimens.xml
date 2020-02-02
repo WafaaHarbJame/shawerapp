@@ -62,7 +62,11 @@
     <dimen name="text_size_25">25sp</dimen>
     <dimen name="text_size_30">30sp</dimen>
     <dimen name="text_size_50">50sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="title_text_size">34sp</dimen>
+    <dimen name="base_text_size">20sp</dimen>
     <dimen name="toolbar_height">56dp</dimen>
     <dimen name="theme_radius">@dimen/size_25</dimen>
 </resources>

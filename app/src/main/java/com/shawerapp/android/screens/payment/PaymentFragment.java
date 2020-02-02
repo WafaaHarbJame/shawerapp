@@ -910,7 +910,8 @@ public class PaymentFragment extends BaseFragment implements PaymentContract.Vie
 
     void createQuestionPractise() {
         checkTransActions();
-        mViewModel.mComposerViewModel.setPaidStatus(true, mContainerView, this, viewModel, transActionID);
+        mViewModel.mComposerViewModel.setPaidStatus(true,
+                mContainerView, this, viewModel, transActionID);
         mViewModel.mComposerViewModel.onSubmitComposition();
         db = FirebaseFirestore.getInstance();
         String type = "";
@@ -1058,7 +1059,9 @@ public class PaymentFragment extends BaseFragment implements PaymentContract.Vie
     public void showLoadingIndicator() {
         if (mIndeterminateTransparentProgressDialog == null ||
                 !mIndeterminateTransparentProgressDialog.isShowing()) {
-            Objects.requireNonNull(getActivity()).runOnUiThread(() -> mIndeterminateTransparentProgressDialog = IndeterminateTransparentProgressDialog.show(getContext(), true, false));
+            Objects.requireNonNull(getActivity()).runOnUiThread(() ->
+                    mIndeterminateTransparentProgressDialog = IndeterminateTransparentProgressDialog.show(getContext(),
+                            true, false));
         }
     }
 

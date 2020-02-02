@@ -26,9 +26,12 @@ import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.shawerapp.android.Payment.PaymentActivity;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.adapter.ComposeRequestAdapter;
 import com.shawerapp.android.adapter.item.AttachmentFlexible;
+import com.shawerapp.android.autovalue.CommercialUser;
 import com.shawerapp.android.autovalue.Field;
+import com.shawerapp.android.autovalue.IndividualUser;
 import com.shawerapp.android.autovalue.LawyerUser;
 import com.shawerapp.android.autovalue.Question;
 import com.shawerapp.android.autovalue.SubSubject;
@@ -39,13 +42,16 @@ import com.shawerapp.android.custom.views.CustomLineBarVisualizer;
 import com.shawerapp.android.custom.views.UnswipeableViewPager;
 import com.shawerapp.android.screens.container.ContainerActivity;
 import com.shawerapp.android.screens.container.ContainerContract;
+import com.shawerapp.android.screens.payment.PaymentViewModel;
 import com.shawerapp.android.utils.CommonUtils;
 import com.shawerapp.android.utils.LocaleHelper;
+import com.shawerapp.android.utils.LoginUtil;
 import com.trello.rxlifecycle2.android.FragmentEvent;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -59,10 +65,18 @@ import io.reactivex.functions.Action;
 import me.relex.circleindicator.CircleIndicator;
 import timber.log.Timber;
 
+import static com.shawerapp.android.screens.composer.ComposerKey.QUESTION;
+import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_ATTACHMENT_FILE_UPLOAD;
+import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_AUDIO_FILE_UPLOAD;
+import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_QUESTION_DESCRIPTION;
+
 public final class ComposerFragment extends BaseFragment
         implements ComposerContract.View {
 
     public static int status = 0;
+    public LawyerUser mSelectedLawyer;
+    String gg;
+
 
     public static final String ARG_REQUEST_TYPE = "requestType";
 
@@ -75,8 +89,14 @@ public final class ComposerFragment extends BaseFragment
     public static final String ARG_QUESTION_TO_RESPOND_TO = "questionToRespondTo";
 
     public static final int REQUEST_ATTACH = 1;
+    SharedPManger sharedPManger;
 
-    public static ComposerFragment newInstance(int requestType, Field selectedField, SubSubject selectedSubSubject, LawyerUser selectedLawyerUser, Question question) {
+    String uid;
+
+    public static ComposerFragment newInstance(int requestType, Field selectedField,
+                                               SubSubject selectedSubSubject,
+                                               LawyerUser selectedLawyerUser, Question question) {
+
 
         Bundle args = new Bundle();
         args.putInt(ARG_REQUEST_TYPE, requestType);
@@ -85,10 +105,13 @@ public final class ComposerFragment extends BaseFragment
         args.putParcelable(ARG_SELECTED_LAWYER, selectedLawyerUser);
         args.putParcelable(ARG_QUESTION_TO_RESPOND_TO, question);
 
+
         ComposerFragment fragment = new ComposerFragment();
         fragment.setArguments(args);
+
         return fragment;
     }
+
 
     @Inject
     ComposerContract.ViewModel mViewModel;
@@ -104,6 +127,20 @@ public final class ComposerFragment extends BaseFragment
 
     @BindView(R.id.primaryInstruction)
     TextView mPrimaryInstruction;
+
+
+
+
+ PaymentViewModel paymentViewModelmViewModel;
+
+    LoginUtil mLoginUtil;
+
+
+   /* @Inject
+    PaymentV/iewModel paymentViewModelmViewModel;
+
+    @Inject
+    LoginUtil mLoginUtil;*/
 
     @BindView(R.id.secondaryInstructionTextView)
     TextView secondaryInstructionTextView;
@@ -229,10 +266,24 @@ public final class ComposerFragment extends BaseFragment
         mBtnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String type = getString(R.string.request_a_esteshara);
+
                 Intent intent=new Intent(getActivity(), PaymentActivity.class);
-                intent.putExtra("amount",amount);
-                getActivity().startActivity(intent);
-                getActivity().finish();
+                //Create the bundle
+                Bundle bundle = new Bundle();
+                //Add your data from getFactualResults method to bundle
+          bundle.putString("amount",  amount);
+             //   intent.putExtra("lawer_id",paymentViewModelmViewModel.mSelectedLawyer.uid());
+                intent.putExtra("type",type);
+               // intent.putExtra("questionServiceFee",questionServiceFee);
+                intent.putExtras(bundle);
+              // Toast.makeText(getActivity(), ""+mLoginUtil.getUserID()+"" +
+                     //   ""+paymentViewModelmViewModel.mSelectedLawyer.uid(), Toast.LENGTH_SHORT).show();
+
+
+                startActivity(intent);
+//                getActivity().finish();
 
             }
         });
@@ -421,6 +472,8 @@ public final class ComposerFragment extends BaseFragment
         mUnbinder = ButterKnife.bind(this, view);
 
         myTimer = new Timer();
+        String type = getString(R.string.request_a_esteshara);
+
         myTimer.schedule(new TimerTask() {
             @Override
             public void run() {

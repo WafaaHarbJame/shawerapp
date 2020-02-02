@@ -1,8 +1,13 @@
 package com.shawerapp.android.screens.selectlawyer;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
+import android.util.Log;
+import com.shawerapp.android.Payment.Constants;
 import com.shawerapp.android.R;
+import com.shawerapp.android.SharedPManger;
 import com.shawerapp.android.autovalue.Field;
 import com.shawerapp.android.autovalue.LawyerUser;
 import com.shawerapp.android.autovalue.LawyerUserEvent;
@@ -21,6 +26,7 @@ import javax.inject.Inject;
 import io.reactivex.functions.Consumer;
 import io.reactivex.processors.BehaviorProcessor;
 
+import static android.content.Context.MODE_PRIVATE;
 import static com.shawerapp.android.screens.selectlawyer.SelectLawyerFragment.ARG_REQUEST_TYPE;
 import static com.shawerapp.android.screens.selectlawyer.SelectLawyerFragment.ARG_SELECTED_FIELD;
 import static com.shawerapp.android.screens.selectlawyer.SelectLawyerFragment.ARG_SELECTED_SUBSUBJECT;
@@ -28,6 +34,7 @@ import static com.shawerapp.android.screens.selectlawyer.SelectLawyerFragment.AR
 public final class SelectLawyerViewModel implements SelectLawyerContract.ViewModel {
 
     private BaseFragment mFragment;
+
 
     private SelectLawyerContract.View mView;
 
@@ -48,6 +55,13 @@ public final class SelectLawyerViewModel implements SelectLawyerContract.ViewMod
     private Field mSelectedField;
 
     private SubSubject mSelectedSubSubject;
+    SharedPManger sharedPManger;
+    public  static String Laweryid="Laweryid";
+    public  String Laweryid1;
+
+
+
+
 
     private BehaviorProcessor<LawyerUserEvent> mLawyerUserProcessor = BehaviorProcessor.create();
 
@@ -60,11 +74,21 @@ public final class SelectLawyerViewModel implements SelectLawyerContract.ViewMod
         mRequestType = args.getInt(ARG_REQUEST_TYPE);
         mSelectedField = args.getParcelable(ARG_SELECTED_FIELD);
         mSelectedSubSubject = args.getParcelable(ARG_SELECTED_SUBSUBJECT);
+        Laweryid=mSelectedField.uid();
+
+
+
     }
 
     @Override
     public void onViewCreated() {
         mView.initBindings();
+        //sharedPManger=new SharedPManger(mFragment.getContext());
+      // sharedPManger.SetData("lawer_id",Laweryid);
+        Laweryid1=Laweryid;
+        Log.e("Laweryidselectviewmodel", "Laweryidselectviewmodel" + Laweryid);
+
+
 
         mLawyerUserProcessor
                 .serialize()
@@ -76,13 +100,16 @@ public final class SelectLawyerViewModel implements SelectLawyerContract.ViewMod
         return lawyerUserEvent -> {
             switch (lawyerUserEvent.type()) {
                 case RealTimeDataFramework.EVENT_ADDED:
-                    mView.addItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(), mSelectedSubSubject.uid(), mLoginUtil.getUserID());
+                    mView.addItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(),
+                            mSelectedSubSubject.uid(), mLoginUtil.getUserID());
                     break;
                 case RealTimeDataFramework.EVENT_UPDATED:
-                    mView.updateItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(), mSelectedSubSubject.uid(), mLoginUtil.getUserID());
+                    mView.updateItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(),
+                            mSelectedSubSubject.uid(), mLoginUtil.getUserID());
                     break;
                 case RealTimeDataFramework.EVENT_REMOVED:
-                    mView.removeItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(), mSelectedSubSubject.uid(), mLoginUtil.getUserID());
+                    mView.removeItem(lawyerUserEvent.lawyerUser(), mLoginUtil.getUserRole(), mSelectedSubSubject.uid(),
+                            mLoginUtil.getUserID());
                     break;
             }
         };
@@ -124,6 +151,7 @@ public final class SelectLawyerViewModel implements SelectLawyerContract.ViewMod
 
     @Override
     public boolean onLawyerClicked(LawyerUser lawyerUser) {
+
         mContainerViewModel.goTo(ComposerKey.builder()
                 .requestType(mRequestType)
                 .selectedField(mSelectedField)

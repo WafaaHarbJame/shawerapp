@@ -9,7 +9,7 @@ public class Constants {
     /* The configuration values to change across the app */
     public static class Config {
 
-        /* The payment brands for Ready-to-Use UI and Payment Button */
+        /* The paymentdialagg brands for Ready-to-Use UI and Payment Button */
         public static final Set<String> PAYMENT_BRANDS;
 
 
@@ -18,12 +18,15 @@ public class Constants {
 
             PAYMENT_BRANDS.add("VISA");
             PAYMENT_BRANDS.add("MASTER");
-            PAYMENT_BRANDS.add("MADA");
+            PAYMENT_BRANDS.add("PAYPAL");
+            PAYMENT_BRANDS.add("GOOGLEPAY");
             PAYMENT_BRANDS.add("APPLEPAY");
+            PAYMENT_BRANDS.add("MADA");
+
 
         }
 
-        /* The default payment brand for payment button */
+        /* The default paymentdialagg brand for paymentdialagg button */
         public static final String PAYMENT_BUTTON_BRAND = "GOOGLEPAY";
 
         /* The default amount and currency */
@@ -44,4 +47,5 @@ public class Constants {
     public static final String BASE_URL = "http://52.59.56.185";
     public static final String MERCHANT_ID = "ff80808138516ef4013852936ec200f2";
     public static final String LOG_TAG = "msdk.demo";
+    public  static  final  String key_file="key_file";
 }

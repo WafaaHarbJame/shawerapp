@@ -393,12 +393,16 @@
     <string name="status_payment_failed">الحالة : العملية فشلت</string>
     <string name="PaymentprocessednotSuccessfully">فشل عملية الدفع</string>
     <string name="internetDisconnected">يبدو أن الإنترنت غير متصل</string>
-    <string name="button_ok">ok</string>
-    <string name="SuccessPayed">Success payed</string>
-    <string name="failedpay">Payment Failed</string>
-    <string name="failedpayagain">Payment Failed Try again</string>
+    <string name="button_ok">نعم</string>
+    <string name="failedpayagain">لم تتم عملية الدفع بنجاح حاول مرة اخرى </string>
     <string name="error_message">An error occurred</string>
-    <string name="message_successful_payment">The payment was successful</string>
+    <string name="message_successful_payment">تم الدفع بنجاح </string>
     <string name="message_unsuccessful_payment">فشلت عملية الدفع</string>
+    <string name="SuccessPayed"> تم الدفع بنجاح  </string>
+    <string name="failedpay">لم تتم عملية الدفع بنجاح</string>
+    <string name="payment_button_callback_scheme">paymentbutton</string>
+    <string name="progress_message_checkout_id">Getting the checkout id…</string>
+    <string name="custom_ui_callback_scheme">customui</string>
+    <string name="sdk_version_number">mobile sdk v%s</string>
 
 </resources>

@@ -20,4 +20,10 @@
     <color name="whiteOpaque30">#4cffffff</color>
     <color name="desire">#de3c4b</color>
     <color name="darkLiver">#534B43</color>
+    <color name="checkout_color_accent">#3A4A73</color>
+
+    <!--
+        <color name="checkout_color_accent">@color/yankeesBlue</color>
+    -->
+
 </resources>
