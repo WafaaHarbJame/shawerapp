@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +53,6 @@ import com.shawerapp.android.autovalue.Invoice_;
 import com.shawerapp.android.autovalue.LawyerUser;
 import com.shawerapp.android.autovalue.SubSubject;
 import com.shawerapp.android.base.ActivityLifecycle;
-import com.shawerapp.android.base.BaseActivity;
 import com.shawerapp.android.base.FragmentLifecycle;
 import com.shawerapp.android.screens.answerlist.AnswerListFragment;
 import com.shawerapp.android.screens.composer.ComposerViewModel;
@@ -80,10 +80,11 @@ import static com.shawerapp.android.screens.composer.ComposerFragment.ARG_REQUES
 import static com.shawerapp.android.screens.composer.ComposerFragment.ARG_SELECTED_FIELD;
 import static com.shawerapp.android.screens.composer.ComposerFragment.ARG_SELECTED_LAWYER;
 import static com.shawerapp.android.screens.composer.ComposerFragment.ARG_SELECTED_SUBSUBJECT;
+import static com.shawerapp.android.screens.composer.ComposerFragment.serviceFee;
 import static com.shawerapp.android.screens.composer.ComposerKey.QUESTION;
 import static com.shawerapp.android.screens.payment.PaymentFragment.removeWords;
 
-public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequestListener, PaymentStatusRequestListener {
+public class PaymentActivity extends BaseActivity implements CheckoutIdRequestListener, PaymentStatusRequestListener {
 
     public int mRequestType;
     public SubSubject mSelectedSubSubject;
@@ -100,11 +101,14 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
     long questionServiceFee;
     LawyerUser mSelectedLawyer;
     CollectionReference dbInvoices;
+    CollectionReference dbQuestion;
     String transActionDate;
     String userUId, lawerUId;
     String amount;
     String type;
     SharedPManger sharedPManger;
+    String assignedLawyerName,assignedLawyerUsername,assignedLawyerUid;
+    long serviceFee;
 
 
     // @Inject
@@ -120,6 +124,20 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
     private FirebaseFirestore db;
     private ProgressDialog progressDialog = null;
     private PaymentStatusRequestListener listener = null;
+    DocumentReference questionRef;
+    public  String ar_fieldName;
+    public  String ar_subSubjectName;
+    public  String subSubjectName;
+    public  String fieldUid,fieldName;
+    public  String subSubjectUid;
+    String askerRole,askerUsername,askerUid;
+    Date dateAdded;
+    String status;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,13 +156,17 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
         type = getString(R.string.request_a_esteshara);
 
         db = FirebaseFirestore.getInstance();
-
+         questionRef = db.collection("questions")
+                .document();
 
         if (bundle != null) {
             amount = bundle.getString("amount");
         }
 
         userUId = sharedPManger.getDataString("uid");
+        if(sharedPManger.getDataString("uid")==null){
+            userUId=GlobalData.uid;
+        }
         lawerUId = GlobalData.lawyerId;
         Log.e("Laweryidshared", "Laweryidshared" + lawerUId);
 
@@ -154,6 +176,29 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
         requestCheckoutId(getString(R.string.checkout_ui_callback_scheme));
         transActionID = "" + System.currentTimeMillis();
         Log.e("transActionID", transActionID + "");
+
+
+        ar_fieldName=GlobalData.ar_fieldName;
+        ar_subSubjectName= GlobalData.ar_subSubjectName;
+        subSubjectName=GlobalData.subSubjectName;
+        GlobalData.subSubjectName=subSubjectName;
+        fieldUid=GlobalData.fieldUid;
+        GlobalData.fieldUid=fieldUid;
+        subSubjectUid= GlobalData.subSubjectUid;
+        fieldName= GlobalData.fieldName;
+        askerRole=GlobalData.askerRole;
+        askerUsername=GlobalData.askerUsername;
+        askerUid=GlobalData.askerUid;
+        assignedLawyerName=GlobalData.assignedLawyerName;
+        assignedLawyerUsername=GlobalData.assignedLawyerUsername;
+        assignedLawyerUid=GlobalData.assignedLawyerUid;
+        assignedLawyerName=GlobalData.assignedLawyerUsername;
+        dateAdded=GlobalData.dateAdded;
+        status= GlobalData.status;
+        Toast.makeText(this, ""+askerRole, Toast.LENGTH_SHORT).show();
+
+
+
 
         if (savedInstanceState != null) {
             resourcePath = savedInstanceState.getString(STATE_RESOURCE_PATH);
@@ -322,7 +367,7 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
                 .setCancelable(false).show();
     }
 
-    private void showAlertDialog(int messageId) {
+    protected void showAlertDialog(int messageId) {
         showAlertDialog(getString(messageId));
     }
 
@@ -355,7 +400,7 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
                             code.matches("000.400.020") || code.matches("000.400.010") || code.matches("000.400.100") || code.matches("000.400.020")) {
 
 
-                        showDialog(PaymentActivity.this, getString(R.string.SuccessPayed));
+                        showDialog(PaymentActivity.this, getString(R.string.SuccessPayed),true);
                         // Toast.makeText(PaymentActivity.this, "" + getString(R.string.SuccessPayed), Toast.LENGTH_SHORT).show();
 
 
@@ -497,7 +542,7 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
         finish();
     }
 
-    public void showDialog(Activity activity, String msg) {
+    public void showDialog(Activity activity, String msg,boolean paied) {
 
 
         final Dialog dialog = new Dialog(activity);
@@ -506,9 +551,13 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
         dialog.setContentView(R.layout.paymentdialagg);
 
         TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        ImageView imageView=dialog.findViewById(R.id.imageviewsucc);
+        imageView.setImageDrawable(getDrawable(R.drawable.sucess));
         text.setText(msg);
 
         Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
+        dialogButton.setText(getString(R.string.thankyou));
+
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
@@ -526,22 +575,12 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
                 dbInvoices = db.collection("invoices");
 
                 invoiceRef = db.collection("invoices").document();
+                dbQuestion=db.collection("questions");
 
-//                InvoiceNew invoice_ = new InvoiceNew(invoiceRef.getId(),amount, "0.0%",
-//                        String.valueOf(questionServiceFee), type,
-//                        String.valueOf(questionServiceFee), transActionID,date, "invoices",
-//                        userUId,  lawerUId,"true");
-//
-//                dbInvoices.add(invoice_)
-//                        .addOnSuccessListener(documentReference -> {
-//                            Toast.makeText(PaymentActivity.this, "wafaa test", Toast.LENGTH_SHORT).show();
-//                            Log.e(" documentReference", " Added" + documentReference.toString());
-//                        })
-//                        .addOnFailureListener(e -> {
-//                            Log.e(" e", e.getLocalizedMessage());
-//                        });
+                questionRef= db.collection("questions").document();
 
                 addInvoice(true);
+                addQuestion(true);
 
                 Bundle bundle = new Bundle();
                 bundle.putString(AppConstants.amount, amount);
@@ -580,7 +619,12 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
         TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
         text.setText(msg);
 
+        ImageView imageView=dialog.findViewById(R.id.imageviewsucc);
+        imageView.setImageDrawable(getDrawable(R.drawable.failed));
+        text.setText(msg);
+
         Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
+        dialogButton.setText(getString(R.string.gotohome));
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -588,10 +632,15 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
                 date = new Date();
                 date_string = DateFormat.getDateInstance(DateFormat.SHORT).format(date);
                 dbInvoices = db.collection("invoices");
-
                 invoiceRef = db.collection("invoices").document();
+                dbQuestion=db.collection("questions");
+
+                questionRef= db.collection("questions").document();
+
+
 
                 addInvoice(false);
+                addQuestion(false);
 
                 Intent intent = new Intent(PaymentActivity.this, ContainerActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -614,6 +663,26 @@ public class PaymentActivity extends AppCompatActivity implements CheckoutIdRequ
 
         dbInvoices.add(invoice_).addOnSuccessListener(documentReference -> {
             Toast.makeText(PaymentActivity.this, "wafaa test", Toast.LENGTH_SHORT).show();
+            Log.e(" documentReference", " Added" + documentReference.toString());
+        }).addOnFailureListener(e -> {
+            Log.e(" e", e.getLocalizedMessage());
+        });
+
+    }
+
+
+    public void addQuestion(boolean isPaied) {
+        Question question = new Question(questionRef.getId(),ar_subSubjectName, subSubjectName,
+                subSubjectUid,fieldUid,ar_fieldName,fieldName,askerUid,askerRole ,
+                askerUsername,assignedLawyerUid,assignedLawyerName,assignedLawyerUsername,
+                amount,date,"",isPaied ? "true" : "false",isPaied ? "active" : "false",
+                transActionID, "","questions",date);
+
+//                Map<String,Object> invoiceMap = new HashMap<>();
+//                invoiceMap.put("",invoiceRef.getId());
+
+        dbQuestion.add(question).addOnSuccessListener(documentReference -> {
+            Toast.makeText(PaymentActivity.this, "Question added", Toast.LENGTH_SHORT).show();
             Log.e(" documentReference", " Added" + documentReference.toString());
         }).addOnFailureListener(e -> {
             Log.e(" e", e.getLocalizedMessage());

@@ -17,6 +17,7 @@ import butterknife.ButterKnife;
 import eu.davidea.flexibleadapter.Payload;
 
 import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.shawerapp.android.GlobalData;
 import com.shawerapp.android.R;
 import com.shawerapp.android.adapter.SubSubjectAdapter;
 import com.shawerapp.android.adapter.item.SubSubjectFlexible;
@@ -37,6 +38,8 @@ public final class SelectSubSubjectFragment extends BaseFragment implements Sele
     public static final String ARG_REQUEST_TYPE = "requestType";
 
     public static final String ARG_SELECTED_FIELD = "selectedField";
+    public static String fieldUid;
+
 
     public static SelectSubSubjectFragment newInstance(int requestType, Field selectedField) {
 
@@ -45,6 +48,9 @@ public final class SelectSubSubjectFragment extends BaseFragment implements Sele
         args.putParcelable(ARG_SELECTED_FIELD, selectedField);
         SelectSubSubjectFragment fragment = new SelectSubSubjectFragment();
         fragment.setArguments(args);
+        selectedField.uid();
+        fieldUid=selectedField.uid();
+        GlobalData.fieldUid=fieldUid;
         return fragment;
     }
 

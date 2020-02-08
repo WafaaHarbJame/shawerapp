@@ -822,7 +822,7 @@ public final class ComposerViewModel implements ComposerContract.ViewModel, Seri
                 addNewQuestion(audioFileUpload, attachmentFileUpload, composition, mmView, paymentFragment);
                 this.setPaidStatus(false);
             } else {
-                mContainerViewModel
+              /*  mContainerViewModel
                         .goTo(PaymentKey.builder()
                                 .requestType(mRequestType)
                                 .selectedField(mSelectedField)
@@ -835,7 +835,7 @@ public final class ComposerViewModel implements ComposerContract.ViewModel, Seri
                                 .mComposition(mComposition)
                                 .mComposerViewModel(this)
                                 .build())
-                        .subscribe(mContainerViewModel.navigationObserver());
+                        .subscribe(mContainerViewModel.navigationObserver());*/
             }
         } else if (mRequestType == PRACTICE) {
             if (paid) {
@@ -869,7 +869,9 @@ public final class ComposerViewModel implements ComposerContract.ViewModel, Seri
 
     @SuppressLint("CheckResult")
     @Override
-    public void addNewQuestion(Maybe<String> audioFileUpload, Maybe<List<String>> attachmentFileUpload, Maybe<String> questionDescription) {
+    public void addNewQuestion(Maybe<String> audioFileUpload,
+                               Maybe<List<String>> attachmentFileUpload,
+                               Maybe<String> questionDescription) {
         long questionServiceFee;
         if (mLoginUtil.getUserRole().equals(IndividualUser.ROLE_VALUE)) {
             questionServiceFee = mSelectedLawyer.individualFees().get(mSelectedSubSubject.uid());
@@ -1029,7 +1031,7 @@ public final class ComposerViewModel implements ComposerContract.ViewModel, Seri
                                 mContainerViewModel.catchErrorThrowable().accept(throwable);
                             }
                         }
-                        );
+                );
 
     }
 

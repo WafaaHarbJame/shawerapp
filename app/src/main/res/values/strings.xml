@@ -392,7 +392,7 @@
     <string name="checkout_ui_callback_scheme" translatable="false">checkoutui</string>
     <string name="button_ok">ok</string>
     <string name="progress_message_payment_status">progress_message_payment_status</string>
-    <string name="SuccessPayed">Success payed</string>
+    <string name="SuccessPayed">Payment Successful </string>
     <string name="failedpay">Payment Failed</string>
     <string name="failedpayagain">Payment Failed Try again</string>
     <string name="error_message">An error occurred</string>
@@ -402,5 +402,8 @@
     <string name="payment_button_callback_scheme">paymentbutton</string>
     <string name="custom_ui_callback_scheme">customui</string>
     <string name="sdk_version_number">mobile sdk v%s</string>
+    <string name="thankyou">Yes</string>
+    <string name="gotohome">Go to Home </string>
+
 
 </resources>

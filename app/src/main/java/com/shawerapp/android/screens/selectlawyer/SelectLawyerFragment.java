@@ -47,10 +47,18 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
     public static final String ARG_SELECTED_SUBSUBJECT = "selectedSubSubject";
     SharedPManger sharedPManger;
     public  String Laweryid1;
+    public static String ar_fieldName;
+    public static String ar_subSubjectName;
+    public static String subSubjectName;
+    public static String fieldUid;
+    public  static  String subSubjectUid;
+    public  static  String fieldName;
 
 
 
-    public static SelectLawyerFragment newInstance(int requestType, Field selectedField, SubSubject selectedSubSubject) {
+
+    public static SelectLawyerFragment newInstance(int requestType, Field selectedField,
+                                                   SubSubject selectedSubSubject) {
 
         Bundle args = new Bundle();
         args.putInt(ARG_REQUEST_TYPE, requestType);
@@ -60,7 +68,12 @@ public final class SelectLawyerFragment extends BaseFragment implements SelectLa
         fragment.setArguments(args);
         Laweryid=selectedField.uid();
         Log.e("Laweryidf", "Laweryidf" + Laweryid);
-        GlobalData.lawyerId =Laweryid;
+
+
+
+
+
+
 
 
 

@@ -2,12 +2,14 @@ package com.shawerapp.android.screens.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.shawerapp.android.GlobalData;
 import com.shawerapp.android.MainActivity;
 import com.shawerapp.android.R;
 import com.shawerapp.android.SharedPManger;
@@ -107,9 +109,16 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                         ((IndividualUser) user).status().equalsIgnoreCase
                                                 (IndividualUser.Status.ACTIVATED)) {
                                     sharedPManger.SetData("uid",mLogintUtil.getUserID());
-
+                                    GlobalData.uid=mLogintUtil.getUserID();
                                     mLogintUtil.setUserRole(IndividualUser.ROLE_VALUE);
                                     mLogintUtil.setUsername(((IndividualUser) user).username());
+                                    GlobalData.role=mLogintUtil.getUserRole();
+                                    GlobalData.askerUid=mLogintUtil.getUserID();
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+
                                     FirebaseMessaging.getInstance().subscribeToTopic("individual")
                                             .addOnCompleteListener(task -> {
                                                 System.out.println("Done => " + task.toString());
@@ -120,20 +129,36 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                         ((CommercialUser) user).status().equalsIgnoreCase(CommercialUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUsername(((CommercialUser) user).username());
                                     sharedPManger.SetData("uid",mLogintUtil.getUserID());
-
+                                    GlobalData.uid=mLogintUtil.getUserID();
                                     mLogintUtil.setUserRole(CommercialUser.ROLE_VALUE);
+                                    GlobalData.role=mLogintUtil.getUserRole();
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+
                                     return Maybe.just(ContainerActivity.TYPE_COMMERCIAL);
                                 } else if (user instanceof LawyerUser &&
                                         ((LawyerUser) user).status().equalsIgnoreCase(LawyerUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUserRole(LawyerUser.ROLE_VALUE);
+                                    GlobalData.uid=mLogintUtil.getUserID();
                                     mLogintUtil.setUsername(((LawyerUser) user).username());
-
                                     sharedPManger.SetData("uid",mLogintUtil.getUserID());
+                                    GlobalData.uid=mLogintUtil.getUserID();
+                                    GlobalData.role=mLogintUtil.getUserRole();
+                                    GlobalData.askerUid=mLogintUtil.getUserID();
+                                    GlobalData.askerRole=mLogintUtil.getUserRole();
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+
 
                                     FirebaseMessaging.getInstance().subscribeToTopic("lawyer")
                                             .addOnCompleteListener(task -> {
 
                                             });
+
                                     return Maybe.just(ContainerActivity.TYPE_LAWYER);
                                 } else {
                                     return mAuthFramework.logout()
@@ -155,6 +180,13 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                 if (user instanceof IndividualUser &&
                                         ((IndividualUser) user).status().equalsIgnoreCase(IndividualUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUserRole(IndividualUser.ROLE_VALUE);
+                                    GlobalData.uid=mLogintUtil.getUserID();
+                                    GlobalData.askerUid=mLogintUtil.getUserID();
+                                    GlobalData.askerRole=mLogintUtil.getUserRole();
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
                                     FirebaseMessaging.getInstance().subscribeToTopic("individual")
                                             .addOnCompleteListener(task -> {
                                                 System.out.println("Done => " + task.toString());
@@ -163,6 +195,16 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                 } else if (user instanceof CommercialUser &&
                                         ((CommercialUser) user).status().equalsIgnoreCase(CommercialUser.Status.ACTIVATED)) {
                                     mLogintUtil.setUserRole(CommercialUser.ROLE_VALUE);
+                                    GlobalData.role=mLogintUtil.getUserRole();
+                                    GlobalData.uid=mLogintUtil.getUserID();
+                                    GlobalData.askerUid=mLogintUtil.getUserID();
+                                    GlobalData.askerRole=mLogintUtil.getUserRole();
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+
                                     return Maybe.just(ContainerActivity.TYPE_COMMERCIAL);
                                 } else if (user instanceof LawyerUser &&
                                         ((LawyerUser) user).status().equalsIgnoreCase(LawyerUser.Status.ACTIVATED)) {
@@ -171,7 +213,19 @@ public class LoginViewModel implements LoginContract.ViewModel {
                                                 System.out.println("Done => " + task.toString());
                                             });
                                     mLogintUtil.setUserRole(LawyerUser.ROLE_VALUE);
+                                    GlobalData.role=mLogintUtil.getUserRole();
+                                   GlobalData.askerUid=mLogintUtil.getUserID();
+                                   GlobalData.askerUsername=mLogintUtil.getUsername();
+                              GlobalData.askerRole=mLogintUtil.getUserRole();
+                                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+                                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+
+
                                     return Maybe.just(ContainerActivity.TYPE_LAWYER);
+
+
                                 } else {
                                     return mAuthFramework.logout()
                                             .andThen(Maybe.error(new Throwable(mActivity.getString(R.string.message_activation_error))));
@@ -185,6 +239,17 @@ public class LoginViewModel implements LoginContract.ViewModel {
                     Intent intent = new Intent(mActivity, ContainerActivity.class);
                     intent.putExtra(ContainerActivity.EXTRA_TYPE, type);
                     sharedPManger.SetData("uid",mLogintUtil.getUserID());
+                    GlobalData.uid=mLogintUtil.getUserID();
+                    GlobalData.askerUid=mLogintUtil.getUserID();
+                    GlobalData.askerRole=mLogintUtil.getUserRole();
+                    GlobalData.role=mLogintUtil.getUserRole();
+                    GlobalData.askerUsername=mLogintUtil.getUsername();
+
+                    Log.d("askerRole", "askerRole: "+mLogintUtil.getUserRole());
+                    Log.d("askerUid", "askerUid: "+mLogintUtil.getUserID());
+
+
+
                     sharedPManger.SetData(ContainerActivity.EXTRA_TYPE,type);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     mActivity.finish();

@@ -399,10 +399,13 @@
     <string name="message_successful_payment">تم الدفع بنجاح </string>
     <string name="message_unsuccessful_payment">فشلت عملية الدفع</string>
     <string name="SuccessPayed"> تم الدفع بنجاح  </string>
-    <string name="failedpay">لم تتم عملية الدفع بنجاح</string>
+    <string name="failedpay">فشلت عملية الدفع </string>
     <string name="payment_button_callback_scheme">paymentbutton</string>
     <string name="progress_message_checkout_id">Getting the checkout id…</string>
     <string name="custom_ui_callback_scheme">customui</string>
     <string name="sdk_version_number">mobile sdk v%s</string>
+    <string name="thankyou">Yes</string>
+    <string name="gotohome">الرجوع الى الصفحة الرئيسية </string>
+
 
 </resources>

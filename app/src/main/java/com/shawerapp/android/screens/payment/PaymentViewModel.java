@@ -85,7 +85,7 @@ public class PaymentViewModel implements PaymentContract.ViewModel {
     private BaseActivity mActivity;
 
 
-    public ComposerViewModel mComposerViewModel;
+    ComposerViewModel mComposerViewModel;
 
     @Inject
     ContainerContract.ViewModel mContainerViewModel;
@@ -112,13 +112,13 @@ public class PaymentViewModel implements PaymentContract.ViewModel {
 
     private Image mSelectedProfilePicture;
 
-    public int mRequestType;
+    int mRequestType;
 
     Field mSelectedField;
 
-    public SubSubject mSelectedSubSubject;
+    SubSubject mSelectedSubSubject;
 
-    public LawyerUser mSelectedLawyer;
+    LawyerUser mSelectedLawyer;
 
     Maybe<String> questionDescription;
     Maybe<String> audioFileUpload;

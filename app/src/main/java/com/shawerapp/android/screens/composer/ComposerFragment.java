@@ -11,6 +11,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +24,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.shawerapp.android.GlobalData;
 import com.shawerapp.android.Payment.PaymentActivity;
 import com.shawerapp.android.R;
 import com.shawerapp.android.SharedPManger;
@@ -69,6 +73,7 @@ import static com.shawerapp.android.screens.composer.ComposerKey.QUESTION;
 import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_ATTACHMENT_FILE_UPLOAD;
 import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_AUDIO_FILE_UPLOAD;
 import static com.shawerapp.android.screens.payment.PaymentFragment.ARG_QUESTION_DESCRIPTION;
+import static io.reactivex.internal.operators.flowable.FlowableBlockingSubscribe.subscribe;
 
 public final class ComposerFragment extends BaseFragment
         implements ComposerContract.View {
@@ -76,7 +81,13 @@ public final class ComposerFragment extends BaseFragment
     public static int status = 0;
     public LawyerUser mSelectedLawyer;
     String gg;
-
+    ComposerViewModel mComposerViewModel;
+    public static String ar_fieldName;
+    public static String ar_subSubjectName;
+    public static String subSubjectName;
+    public static String fieldUid;
+    public  static  String subSubjectUid;
+    public  static  String fieldName;
 
     public static final String ARG_REQUEST_TYPE = "requestType";
 
@@ -92,6 +103,9 @@ public final class ComposerFragment extends BaseFragment
     SharedPManger sharedPManger;
 
     String uid;
+    public  static String role;
+    public  static long serviceFee;
+
 
     public static ComposerFragment newInstance(int requestType, Field selectedField,
                                                SubSubject selectedSubSubject,
@@ -104,6 +118,43 @@ public final class ComposerFragment extends BaseFragment
         args.putParcelable(ARG_SELECTED_SUBSUBJECT, selectedSubSubject);
         args.putParcelable(ARG_SELECTED_LAWYER, selectedLawyerUser);
         args.putParcelable(ARG_QUESTION_TO_RESPOND_TO, question);
+        Log.d("question", "question: "+question);
+        //Log.d("question", "question: "+question.askerUid());
+      GlobalData.assignedLawyerName=selectedLawyerUser.fullName();
+        GlobalData.assignedLawyerUsername=selectedLawyerUser.username();
+       GlobalData.assignedLawyerUid=selectedLawyerUser.uid();
+        ar_fieldName=selectedField.ar_fieldName();
+        GlobalData.ar_fieldName=ar_fieldName;
+        ar_subSubjectName=selectedSubSubject.ar_subSubjectName();
+        GlobalData.ar_subSubjectName=ar_subSubjectName;
+        subSubjectName=selectedSubSubject.subSubjectName();
+        GlobalData.subSubjectName=subSubjectName;
+        fieldUid=selectedField.uid();
+        GlobalData.fieldUid=fieldUid;
+        subSubjectUid=selectedSubSubject.uid();
+        GlobalData.subSubjectUid=subSubjectUid;
+        fieldName=selectedField.fieldName();
+        GlobalData.fieldName=fieldName;
+        //GlobalData.dateAdded=question.dateAdded();
+
+        //role=GlobalData.role;
+       // GlobalData.askerUid=question.askerUid();
+        /*GlobalData.askerRole=question.askerRole();
+        GlobalData.activeStatus=question.activeStatus();
+        GlobalData.dateAdded=question.dateAdded();
+        */
+      /*  if ( role.equals(IndividualUser.ROLE_VALUE)) {
+            serviceFee = selectedLawyerUser.individualFees().get(selectedSubSubject.uid());
+
+        } else if (role.equals(CommercialUser.ROLE_VALUE)) {
+            serviceFee = selectedLawyerUser.commercialFees().get(selectedSubSubject.uid());
+        } else {
+            serviceFee = 0L;
+        }
+
+        GlobalData.serviceFee=serviceFee;*/
+      //  GlobalData.status=question.status();
+
 
 
         ComposerFragment fragment = new ComposerFragment();
@@ -258,7 +309,7 @@ public final class ComposerFragment extends BaseFragment
         mVoiceProgressBar.setColor(ContextCompat.getColor(getContext(), R.color.yankeesBlue));
         mVoiceProgressBar.setDensity(45f);
 
-       /*RxView.clicks(mBtnPay)
+      /*RxView.clicks(mBtnPay)
                 .compose(bindUntilEvent(FragmentEvent.DESTROY_VIEW))
                 .throttleFirst(1, TimeUnit.SECONDS)
                 .subscribe(o -> mViewModel.onSubmitComposition());*/
@@ -267,23 +318,18 @@ public final class ComposerFragment extends BaseFragment
             @Override
             public void onClick(View v) {
 
+               // mViewModel.onSubmitComposition();
+
                 String type = getString(R.string.request_a_esteshara);
 
                 Intent intent=new Intent(getActivity(), PaymentActivity.class);
                 //Create the bundle
                 Bundle bundle = new Bundle();
-                //Add your data from getFactualResults method to bundle
-          bundle.putString("amount",  amount);
-             //   intent.putExtra("lawer_id",paymentViewModelmViewModel.mSelectedLawyer.uid());
+                bundle.putString("amount",  amount);
                 intent.putExtra("type",type);
-               // intent.putExtra("questionServiceFee",questionServiceFee);
                 intent.putExtras(bundle);
-              // Toast.makeText(getActivity(), ""+mLoginUtil.getUserID()+"" +
-                     //   ""+paymentViewModelmViewModel.mSelectedLawyer.uid(), Toast.LENGTH_SHORT).show();
-
 
                 startActivity(intent);
-//                getActivity().finish();
 
             }
         });
@@ -521,4 +567,6 @@ public final class ComposerFragment extends BaseFragment
 //            mViewModel.onSubmitComposition();
 //        }
     }
+  
+
 }

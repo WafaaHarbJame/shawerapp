@@ -628,7 +628,7 @@ public class PaymentFragment extends BaseFragment implements PaymentContract.Vie
                                         addNotPaidInvoice(finalType1);
                                         hideLoadingIndicator();
                                     } else if (html.contains("\\\"Response_GatewayStatusCode\\\":\\\"10001\\\"") ||
-                                            html.contains("\\\"Response_StatusCode\\\":\\\"10001\\\"")) {
+                                             html.contains("\\\"Response_StatusCode\\\":\\\"10001\\\"")) {
                                         Toast.makeText(getContext(), getString(R.string.InvalidSecurityCode), Toast.LENGTH_LONG).show();
                                         addNotPaidInvoice(finalType1);
                                         hideLoadingIndicator();
@@ -936,7 +936,6 @@ public class PaymentFragment extends BaseFragment implements PaymentContract.Vie
             questionServiceFee = 0L;
         }
 
-
         Invoice invoice_ = Invoice.builder()
                 .UserUid(mLoginUtil.getUserID())
                 .collection("invoices")
@@ -1059,9 +1058,7 @@ public class PaymentFragment extends BaseFragment implements PaymentContract.Vie
     public void showLoadingIndicator() {
         if (mIndeterminateTransparentProgressDialog == null ||
                 !mIndeterminateTransparentProgressDialog.isShowing()) {
-            Objects.requireNonNull(getActivity()).runOnUiThread(() ->
-                    mIndeterminateTransparentProgressDialog = IndeterminateTransparentProgressDialog.show(getContext(),
-                            true, false));
+            Objects.requireNonNull(getActivity()).runOnUiThread(() -> mIndeterminateTransparentProgressDialog = IndeterminateTransparentProgressDialog.show(getContext(), true, false));
         }
     }
 

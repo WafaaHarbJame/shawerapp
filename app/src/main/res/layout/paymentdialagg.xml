@@ -1,12 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
-    android:layout_marginEnd="@dimen/text_size_16"
-    android:layout_marginStart="@dimen/text_size_16"
-    android:background="#ffffffff">
+    android:background="@drawable/backgrounds">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#1b233e"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/text_size_16"
+        android:layout_marginStart="@dimen/text_size_16"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/imageviewsucc"
+            android:src="@drawable/sucess"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/text_size_16"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -15,24 +30,24 @@
         android:id="@+id/text_dialog"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="4dp"
+        android:background="#1b233e"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="20dp"
         android:textSize="18sp"
-        android:textColor="#ff000000"
+        android:textColor="@color/ef_white"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/yes"
+        android:text="@string/thankyou"
         android:id="@+id/btn_dialog"
         android:layout_gravity="center"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_below="@+id/text_dialog"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
-        android:layout_marginBottom="@dimen/text_size_16"
+        android:background="#daa438"
         android:textColor="#ffffffff" />
+    </LinearLayout>
 
 </LinearLayout>

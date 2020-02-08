@@ -26,8 +26,15 @@ import timber.log.Timber;
 @AutoValue
 public abstract class Question implements Parcelable {
 
-    @Nullable
+    //@Nullable
     public abstract String uid();
+    public static final String uid = "uid";
+    public static final String askerUid = "askerUid";
+    public static final String askerRole = "askerRole";
+    public static final String askerUsername = "askerUsername";
+
+
+
 
     @Nullable
     public abstract String ar_subSubjectName();

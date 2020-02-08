@@ -502,6 +502,7 @@ public class FirestoreRealTimeDataFrameworkImpl implements RealTimeDataFramework
         Long serviceFee;
         if (mLoginUtil.getUserRole().equals(IndividualUser.ROLE_VALUE)) {
             serviceFee = selectedLawyer.individualFees().get(selectedSubSubject.uid());
+
         } else if (mLoginUtil.getUserRole().equals(CommercialUser.ROLE_VALUE)) {
             serviceFee = selectedLawyer.commercialFees().get(selectedSubSubject.uid());
         } else {

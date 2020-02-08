@@ -114,33 +114,33 @@ import io.reactivex.Maybe;
                 .build();
     }
 
-    public static PaymentKey.Builder builder() {
+    public static Builder builder() {
         return new AutoValue_PaymentKey.Builder();
     }
 
     @AutoValue.Builder
     public abstract static class Builder {
-        public abstract PaymentKey.Builder selectedLawyerUser(LawyerUser selectedLawyerUser);
+        public abstract Builder selectedLawyerUser(LawyerUser selectedLawyerUser);
 
-        public abstract PaymentKey.Builder selectedField(Field selectedField);
+        public abstract Builder selectedField(Field selectedField);
 
-        public abstract PaymentKey.Builder selectedSubSubject(SubSubject selectedSubSubject);
+        public abstract Builder selectedSubSubject(SubSubject selectedSubSubject);
 
-        public abstract PaymentKey.Builder requestType(int requestType);
+        public abstract Builder requestType(int requestType);
 
-        public abstract PaymentKey.Builder questionDescription(String questionDescription);
+        public abstract Builder questionDescription(String questionDescription);
 
-        public abstract PaymentKey.Builder audioFileUpload(String audioFileUpload);
+        public abstract Builder audioFileUpload(String audioFileUpload);
 
-        public abstract PaymentKey.Builder mRecordedAudioFile(File mRecordedAudioFile);
+        public abstract Builder mRecordedAudioFile(File mRecordedAudioFile);
 
 //        public abstract PaymentKey.Builder mSelectedFilesPaths(ArraySet<String> mSelectedFilesPaths);
 
-        public abstract PaymentKey.Builder mComposition(CharSequence mComposition);
+        public abstract Builder mComposition(CharSequence mComposition);
 
-        public abstract PaymentKey.Builder attachmentFileUpload(List<String> attachmentFileUpload);
+        public abstract Builder attachmentFileUpload(List<String> attachmentFileUpload);
 
-        public abstract PaymentKey.Builder mComposerViewModel(ComposerViewModel mComposerViewModel);
+        public abstract Builder mComposerViewModel(ComposerViewModel mComposerViewModel);
 
         public abstract PaymentKey build();
     }

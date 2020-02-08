@@ -56,6 +56,7 @@ public class LawyerViewFragment extends BaseFragment implements LawyerViewContra
 
         Bundle args = new Bundle();
         args.putParcelable(ARG_LAWYER, lawyerUser);
+
         LawyerViewFragment fragment = new LawyerViewFragment();
         fragment.setArguments(args);
         return fragment;
